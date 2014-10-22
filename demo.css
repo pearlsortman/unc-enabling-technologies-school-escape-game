@@ -1,0 +1,9 @@
+h1 {
+	font-size: 2em;
+}
+
+.header {
+	height: 50px;
+	vertical-align: top;
+	padding-top: 2px;
+}
