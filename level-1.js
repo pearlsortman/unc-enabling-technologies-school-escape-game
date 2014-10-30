@@ -1,5 +1,6 @@
+var newCommentary;
+
 $(document).ready(function() {
-	alert("ready function working");
     console.log( "ready!" );
     changeCommentary("more random shit");
     activeElement('#item_1');
@@ -11,4 +12,5 @@ function changeCommentary(newCommentary) {
 
 function activeElement(elementID) {
 	$('elementID').css("border", "red");
+	console_log("activate");
 };
