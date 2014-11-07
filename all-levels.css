@@ -1,0 +1,87 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+h1, h2 {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+}
+p {
+    font-size: 1.5em;
+}
+div {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.primaryDiv {
+    display: table;
+}
+.secondaryDiv {
+    display: table-cell;
+}
+
+#header {
+    background-color: gray;
+    padding-top: 20px;
+    width: 100%;
+    height: 75px;
+}
+#main {
+    height: 200px;
+}
+#scene, #toolbox {
+    display: table-cell;
+}
+#scene {
+    width: 70%;
+    position: relative;
+}
+#toolbox {
+    background-color: orange;
+    width: 30%;
+    vertical-align: top;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+#toolbox table {
+    height: 95%;
+    width: 100%;
+}
+#footer {
+    height: 200px;
+    background-color: gray;
+}
+#footer p {
+    padding: 10px;
+}
+#solution {
+    background-color: gray;
+    width: 30%;
+}
+#commentary {
+    background-color: orange;
+    width: 70%;
+}
+
+.clickable, .dummy {
+    margin: 0;
+    background-color: none;
+    color: black;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.hidden {
+    visibility: hidden;
+}
+.entered {
+    background-color: yellow;
+}

@@ -5,25 +5,25 @@
 
 <head>
     <script type="text/javascript" src="jquery-2.1.1.js"></script>
-    <script src="levels.js" type="text/javascript"></script>
-    <script src="level-1.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="levels.css"></link>
-    <link rel="stylesheet" type="text/css" href="level-1.css"></link>
-    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="level-1.js"></script>
+    <script type="text/javascript" src="all-levels.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="all-levels.css">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,700">
 </head>
 
 <body>
 
-    <div class="header">
+    <div class="primaryDiv" id="header">
         <h1>school escape... level 1: the classroom</h1>
     </div>
 
-    <div class="container">
-        <div class="scene">
+    <div class="primaryDiv" id="main">
+        <div class="secondaryDiv" id="scene">
 
             <div class="clickable" id="item_1" tabindex="1">
             	<p class="covering" id="fishbowl">fishbowl</p>
-            	<p class="hidden" id="key">key</p>
+            	<p class="hidden tool" id="key">key</p>
             </div>
  
             <div class="dummy" id="item_2" tabindex="3">
@@ -35,7 +35,7 @@
             </div>
 
         </div>
-        <div class="toolbox" id="item_5">
+        <div class="secondaryDiv" id="toolbox">
             <h1>toolbox</h1>
             <table>
                 <tr>
@@ -51,12 +51,13 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="commentary">
+    <div class="primaryDiv" id="footer">
+        <div class="secondaryDiv" id="commentary">
             <p id="text">oh no! you've found yourself locked all alone in this classroom. use the tools around you to figure out how to escape.</p>
         </div>
-        <div class="solution, clickable" tabindex="5">Stuck? Click here for full solution!</div>
-
+        <div class="secondaryDiv clickable" id="solution" tabindex="5">
+            <p>Stuck? Click here for full solution!</p>
+        </div>
     </div>
 
 </body>
