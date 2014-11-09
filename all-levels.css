@@ -32,7 +32,7 @@ div {
     height: 75px;
 }
 #main {
-    height: 200px;
+    height: 500px;
 }
 #scene, #toolbox {
     display: table-cell;
@@ -70,10 +70,11 @@ img {
     width: 70%;
 }
 
-.clickable, .dummy {
+.clickable {
     margin: 0;
     background-color: none;
-    color: black;
+    color: red;
+    font-style: bold;
     width: 100px;
     height: 100px;
     position: absolute;

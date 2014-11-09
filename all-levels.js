@@ -19,10 +19,17 @@ $(document).ready(function() {
     //click event
     $('.clickable, .dummy').click(function() {
         var currentObject = $(this);
+        var currentFirstChild = currentObject.children('p:first');
+
         if (currentObject.is('#solution')) {
             changeCommentary(getSolution());
+        } else if (currentFirstChild.hasClass('dummy')) {
+            changeCommentary('nothing under the ' + currentFirstChild.text() + ', keep looking');
+        } else if (currentFirstChild.hasClass('tool')) {
+            moveToToolbox(currentFirstChild);
+            currentObject.remove();
         } else {
-            clickityClick(currentObject);
+            clickityClick(currentObject, currentFirstChild);
         }
        
         isGameOver();
@@ -38,18 +45,25 @@ function moveToToolbox(tool) {
     inToolbox.push(insertInToolbox);
     nextOpen++;
 
-    changeCommentary('you have sucessfully added the ' + insertInToolbox + ' into your toolbox');
+    changeCommentary('(generic-1) you have sucessfully added the ' + insertInToolbox + ' into your toolbox');
 };
 
 function changeCommentary(text) {
     $('#text').text(text);
 };
 
+function removeObject(currentFirstChild) {
+    this.currentFirstChild = currentFirstChild;
+    currentFirstChild.remove();
+    currentFirstChild = currentObject.children('p:first');
+    currentFirstChild.removeClass('hidden');
+}
+
 function isGameOver() {
     var nextLevel = getLevel() + 1;
     var nextLevelLink = 'level-' + nextLevel + '.html';
     if (gameOver) {
-        changeCommentary('Congratulations! You made it to level ' + nextLevel);
+        changeCommentary('(generic-2) Congratulations! You made it to level ' + nextLevel);
         if (nextLevel <= 8) {
             setTimeout(function() {
                 window.location.replace(nextLevelLink);

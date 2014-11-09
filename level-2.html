@@ -14,28 +14,32 @@
 
 <body>
 
-    <div class="header">
+    <div class="primaryDiv" id="header">
         <h1>school escape... level 2: the cafeteria</h1>
     </div>
 
-    <div class="container">
-        <div class="scene">
+    <div class="primaryDiv" id="main">
+        <div class="secondaryDiv" id="scene">
 
             <div class="clickable" id="item_1" tabindex="1">
-            	<p class="covering" id="fishbowl">fishbowl</p>
-            	<p class="hidden" id="key">key</p>
+                <p class="covering" id="souppot">pot of soup</p>
+                <p class="hidden tool" id="doorkey">doorkey</p>
             </div>
  
-            <div class="dummy" id="item_2" tabindex="3">
-            	<p id="desk">desk</p>
+            <div class="clickable" id="item_2" tabindex="2">
+                <p class="dummy" id="lunchtray">lunch tray</p>
             </div>
 
-            <div class="clickable" id="item_3" tabindex="4">
-            	<p class="covering" id="door">door</p>
+            <div class="clickable" id="item_3" tabindex="3">
+                <p class="tool" id="ladle">ladle</p>
+            </div> 
+
+            <div class="clickable" id="item_4" tabindex="4">
+                <p class="covering" id="exit">door</p>
             </div>
 
         </div>
-        <div class="toolbox" id="item_5">
+        <div class="secondaryDiv" id="toolbox">
             <h1>toolbox</h1>
             <table>
                 <tr>
@@ -51,12 +55,13 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="commentary">
-            <p id="text"></p>
+    <div class="primaryDiv" id="footer">
+        <div class="secondaryDiv" id="commentary">
+            <p id="text">&#40;2a&#41; oh no! you've found yourself locked all alone in this classroom. use the tools around you to figure out how to escape.</p>
         </div>
-        <div class="solution, clickable" tabindex="5">Stuck? Click here for full solution!</div>
-
+        <div class="secondaryDiv clickable" id="solution" tabindex="5">
+            <p>Stuck? Click here for full solution!</p>
+        </div>
     </div>
 
 </body>

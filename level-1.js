@@ -14,32 +14,25 @@ $(document).ready(function() {
     });
 });
 
-function clickityClick(currentObject) {
+function clickityClick(currentObject, currentFirstChild) {
     this.currentObject = currentObject;
-    if (currentObject.hasClass('dummy')) {
-        if (currentObject.children('p').is('#desk')) {
-            changeCommentary('sorry, nothing in the desk right now');
+    var current = currentFirstChild;
+
+    if (current.is('#exit')) {
+        if (($.inArray('doorkey', inToolbox)) > -1) {
+            gameOver = true;
+        } else {
+            changeCommentary('(1d) sorry, you need the key first');
         }
     } else {
-        if (currentObject.children('p:first').hasClass('tool')) {
-            moveToToolbox(currentObject.children('p:first'));
-            currentObject.remove();
-        } else {
-            if (currentObject.children('p').is('#exit')) {
-                if (($.inArray('key', inToolbox)) > -1) {
-                    gameOver = true;
-                } else {
-                    changeCommentary('sorry, you need the key first');
-                }
-            } else {
-                if (currentObject.children('p').is('#fishbowl')) {
-                    changeCommentary('you found the key');
-                }
-                currentObject.children('p:first').remove();
-                currentObject.children('p:first').removeClass('hidden');
-            }
+        if (currentFirstChild.is('#fishbowl')) {
+            changeCommentary('(1e) you found the key');
         }
+        current.remove();
+        current = currentObject.children('p:first');
+        current.removeClass('hidden');
     }
+
 };
 
 function getLevel() {
@@ -47,5 +40,5 @@ function getLevel() {
 }
 
 function getSolution() {
-	return '1 - find key in fishbowl, 2 - add key to toolbox, 3 - get to the door';
+    return '1 - find key in fishbowl, 2 - add key to toolbox, 3 - get to the door';
 }
