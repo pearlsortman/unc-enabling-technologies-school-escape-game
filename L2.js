@@ -1,18 +1,18 @@
 $(document).ready(function() {
-    $('#scene').prepend('<img src="cafeteria.jpeg"/>')
-    $('#item_1').css({
+    $('#scene').prepend('<img src="L2.jpg"/>')
+    $('#item_1').css({ //pot of soup & doorkey
         top: 50,
         left: 50
     });
-    $('#item_2').css({
+    $('#item_2').css({ //lunch tray
         top: 100,
         left: 200
     });
-    $('#item_3').css({
+    $('#item_3').css({ //ladle
         top: 300,
         left: 350
     });
-    $('#item_4').css({
+    $('#item_4').css({ //door
         top: 300,
         left: 550
     });
@@ -38,17 +38,13 @@ function clickityClick(currentObject) {
     }
 };
 
-function removeObject(currentFirstChild) {
-    this.currentFirstChild = currentFirstChild;
-    currentFirstChild.remove();
-    currentFirstChild = currentObject.children('p:first');
-    currentFirstChild.removeClass('hidden');
-}
-
 function getLevel() {
     return 2;
 }
 
 function getSolution() {
-    return '1 - click on the ladle to add to toolbox, 2 - click on soup with ladle in toolbox to fish key out of soup, 3 - click on door with key in toolbox';
+    var s1 = '1: click on the ladle to add to toolbox; ';
+    var s2 = '2: click on the pot of soup with ladle in the toolbox to fish out the key; ';
+    var s3 = '3: click on the door with the key in toolbox';
+    return s1 + s2 + s3;
 }

@@ -1,22 +1,22 @@
 $(document).ready(function() {
-    $('#scene').prepend('<img src="mathclassroom.jpg"/>')
-    $('#item_1').css({
+    $('#scene').prepend('<img src="L3.jpg"/>')
+    $('#item_1').css({ //equation & answer
         top: 50,
         left: 50
     });
-    $('#item_2').css({
+    $('#item_2').css({ //math poster
         top: 100,
         left: 200
     });
-    $('#item_3').css({
+    $('#item_3').css({ //math book
         top: 300,
         left: 350
     });
-    $('#item_4').css({
+    $('#item_4').css({ //safe & doorkey
         top: 300,
         left: 550
     });
-    $('#item_5').css({
+    $('#item_5').css({ //door
         top: 75,
         left: 500
     });

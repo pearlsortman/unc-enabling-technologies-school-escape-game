@@ -45,7 +45,7 @@ function moveToToolbox(tool) {
     inToolbox.push(insertInToolbox);
     nextOpen++;
 
-    changeCommentary('(generic-1) you have sucessfully added the ' + insertInToolbox + ' into your toolbox');
+    changeCommentary('(generic1) you have sucessfully added the ' + insertInToolbox + ' into your toolbox');
 };
 
 function changeCommentary(text) {
@@ -61,9 +61,9 @@ function removeObject(currentFirstChild) {
 
 function isGameOver() {
     var nextLevel = getLevel() + 1;
-    var nextLevelLink = 'level-' + nextLevel + '.html';
+    var nextLevelLink = 'L' + nextLevel + '.html';
     if (gameOver) {
-        changeCommentary('(generic-2) Congratulations! You made it to level ' + nextLevel);
+        changeCommentary('(generic2) Congratulations! You made it to level ' + nextLevel);
         if (nextLevel <= 8) {
             setTimeout(function() {
                 window.location.replace(nextLevelLink);

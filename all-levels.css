@@ -83,6 +83,6 @@ img {
 .hidden {
     visibility: hidden;
 }
-.entered {
-    background-color: yellow;
+.entered, :focus {
+    border: solid yellow thick;
 }
