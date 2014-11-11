@@ -72,3 +72,20 @@ function isGameOver() {
     }
     return gameOver;
 };
+
+/*function isGameOver() {
+    if (gameOver) {
+        var nextLevel = getLevel() + 1;
+        var nextLevelScript = 'L' + nextLevel + '.js';
+        $('#levelScript').attr('src', 'nextLevelScript');
+        alert(nextLevelScript);
+    
+        changeCommentary('(generic2) Congratulations! You made it to level ' + nextLevel);
+        if (nextLevel <= 8) {
+            setTimeout(function() {
+                window.location.replace('all-levels.html');
+            }, 2000);
+        }
+    }
+    return gameOver;
+};*/
