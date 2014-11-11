@@ -1,5 +1,15 @@
 $(document).ready(function() {
-    $('#scene').prepend('<img src="L5.jpg"/>')
+
+    // set up this level as a unique view adding all images and clickable objects
+    $('#header h1').text('Level 5: The Computer Lab');
+    $('#scene').prepend('<img src="L5.jpeg"/>');
+    $('#item_1').append('');
+    $('#item_2').append('');
+    $('#item_3').append('');
+    $('#item_4').append('');
+    $('#item_5').append('');
+    changeCommentary('L5: initial room blurb');
+
     $('#item_1').css({ //
         top: 50,
         left: 50

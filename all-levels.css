@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     font-family: sans-serif;
     text-align: center;
+    color: #ffffff;
 }
 h1, h2 {
     font-size: 2em;
@@ -42,7 +43,7 @@ div {
     position: relative;
 }
 #toolbox {
-    background-color: orange;
+    background-color: #000000;
     width: 30%;
     vertical-align: top;
 }
@@ -66,15 +67,13 @@ img {
     width: 30%;
 }
 #commentary {
-    background-color: orange;
+    background-color: #000000;
     width: 70%;
 }
 
 .clickable {
     margin: 0;
     background-color: none;
-    color: red;
-    font-style: bold;
     width: 100px;
     height: 100px;
     position: absolute;

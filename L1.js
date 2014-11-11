@@ -1,5 +1,13 @@
 $(document).ready(function() {
-    $('#scene').prepend('<img src="L1.jpg"/>')
+
+    // set up this level as a unique view adding all images and clickable objects
+    $('#header h1').text('Level 1: The Classroom');
+    $('#scene').prepend('<img src="L1.jpeg"/>');
+    $('#item_1').append('<p class="covering" id="fishbowl">fishbowl</p><p class="hidden tool" id="doorkey">doorkey</p>');
+    $('#item_2').append('<p class="dummy" id="desk">desk</p>');
+    $('#item_3').append('<p class="covering" id="exit">door</p>');
+    changeCommentary('L1: initial room blurb');
+
     $('#item_1').css({ //fishbowl & doorkey
         top: 50,
         left: 50

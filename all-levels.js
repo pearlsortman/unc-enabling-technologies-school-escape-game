@@ -61,7 +61,7 @@ function removeObject(currentFirstChild) {
 
 function isGameOver() {
     var nextLevel = getLevel() + 1;
-    var nextLevelLink = 'L' + nextLevel + '.html';
+    var nextLevelLink = 'L' + nextLevel + '.php';
     if (gameOver) {
         changeCommentary('(generic2) Congratulations! You made it to level ' + nextLevel);
         if (nextLevel <= 8) {

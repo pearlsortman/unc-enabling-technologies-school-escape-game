@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	text-align: center;
 	font-family: 'Source Code Pro', sans-serif;
+	background-color: #ffffff;
 }
 
 h1, h2 {
@@ -30,14 +31,13 @@ a {
 div {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: #1330B2;
 	color: #3D6399;
 	vertical-align: middle;
 	float: none;
 }
 
 .header, .container, .footer {
-	background-color: orange;
+	background-color: blue;
 	width: 100%;
 	margin-bottom: 10px;
 }
@@ -47,7 +47,7 @@ div {
 }
 
 .choicebutton {
-	background-color: #00EEFF;
+	background-color: black;
 	width: 30%;
 	height: 150px;
 	display: table-cell;

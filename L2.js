@@ -1,5 +1,14 @@
 $(document).ready(function() {
-    $('#scene').prepend('<img src="L2.jpg"/>')
+
+    // set up this level as a unique view adding all images and clickable objects
+    $('#header h1').text('Level 2: The Cafeteria');
+    $('#scene').prepend('<img src="L2.jpeg"/>');
+    $('#item_1').append('<p class="covering" id="souppot">pot of soup</p><p class="hidden tool" id="doorkey">doorkey</p>');
+    $('#item_2').append('<p class="dummy" id="lunchtray">lunch tray</p>');
+    $('#item_3').append('<p class="tool" id="ladle">ladle</p>');
+    $('#item_4').append('<p class="covering" id="exit">door</p>');
+    changeCommentary('L2: initial room blurb');
+
     $('#item_1').css({ //pot of soup & doorkey
         top: 50,
         left: 50
