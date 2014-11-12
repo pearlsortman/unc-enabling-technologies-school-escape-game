@@ -2,10 +2,10 @@ $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 3: The Computer Lab');
-    $('#scene').prepend('<img src="L3.jpeg"/>');
-    $('#item_1').append('<p class="covering" id="lockbox">lockbox</p><p class="hidden tool" id="powercord">powercord</p>');
-    $('#item_2').append('<p class="covering" id="desk">desk</p><p class="hidden tool" id="screwdriver">screwdriver</p>');
-    $('#item_3').append('<p id="computer">computer</p>');
+    $('#scene').prepend('<img src="images/L3.jpg"/>');
+    $('#item_1').attr('tabindex', '1').append('<p class="covering" id="lockbox">lockbox</p><p class="hidden tool" id="powercord">powercord</p>');
+    $('#item_2').attr('tabindex', '2').append('<p class="covering" id="desk">desk</p><p class="hidden tool" id="screwdriver">screwdriver</p>');
+    $('#item_3').attr('tabindex', '3').append('<p id="computer">computer</p>');
     changeCommentary('L3: initial room blurb');
 
     $('#item_1').css({ //lockbox & powercord
