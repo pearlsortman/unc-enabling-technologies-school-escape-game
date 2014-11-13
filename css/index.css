@@ -41,11 +41,9 @@ div {
 }
 
 .choicebutton {
-	background-color: black;
+	display: inline-block;
 	width: 30%;
 	height: 250px;
-	display: inline-block;
-	border: solid white 20px;
 	margin-left: 20px;
 	margin-right: 20px;
 	text-align: center;
@@ -54,8 +52,7 @@ div {
 }
 
 .choicebutton:hover {
-	border: solid yellow 20px;
-
+	color: red;
 }
 
 .middle {
