@@ -12,7 +12,7 @@ $(document).ready(function() {
     $('#item_6').attr('class', 'clickable', 'tabindex', '6').append('<p></p>');
     $('#item_7').attr('class', 'clickable', 'tabindex', '7').append('<p></p>');
     $('#item_8').attr('class', 'clickable', 'tabindex', '8').append('<p id="window"></p>');
-    changeCommentary('L5: initial room blurb');
+    changeCommentary('After learning about “numbers” you realized that there is not a lot of recess time left. You bolt out the classroom and rocket down the hallway. However, you see a teacher coming. Knowing that you should not be wandering around the school unsupervised, you duck into the nearest room. The door shuts behind you and locks with a “Click!” You stumble around in the darkness and blindly reach out for a light switch. The light flickers on and the true nature of the situation dawns upon you. Oh no! You’ve locked yourself in the Principal’s Office!');
 
     $('#item_1').css({ //
         top: 50,

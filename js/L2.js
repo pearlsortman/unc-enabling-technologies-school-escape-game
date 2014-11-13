@@ -3,11 +3,11 @@ $(document).ready(function() {
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 2: The Cafeteria');
     $('#background').attr('src', 'images/L2.jpg');
-    $('#item_1').attr('class', 'clickable', 'tabindex', '1').append('<p class="covering" id="souppot"><img src="images/item.jpg">pot of soup</p><p class="hidden tool" id="doorkey"><img src="images/item.jpg">doorkey</p>');
-    $('#item_2').attr('class', 'clickable', 'tabindex', '2').append('<p class="dummy" id="lunchtray">lunch tray</p>');
-    $('#item_3').attr('class', 'clickable', 'tabindex', '3').append('<p class="tool" id="ladle"><img src="images/item.jpg">ladle</p>');
-    $('#item_4').attr('class', 'clickable', 'tabindex', '4').append('<p class="covering" id="exit"><img src="images/item.jpg">door</p>');
-    changeCommentary('L2: initial room blurb');
+    $('#item_1').attr('class', 'clickable').append('<p class="covering" id="souppot"><img src="images/item.jpg">pot of soup</p><p class="hidden tool" id="doorkey"><img src="images/item.jpg">doorkey</p>');
+    $('#item_2').attr('class', 'clickable').append('<p class="dummy" id="lunchtray">lunch tray</p>');
+    $('#item_3').attr('class', 'clickable').append('<p class="tool" id="ladle"><img src="images/item.jpg">ladle</p>');
+    $('#item_4').attr('class', 'clickable', 'tabindex', '4').append('<p class="covering" id="exit">door</p>');
+    changeCommentary('Getting out of that classroom burned more calories than you thought was possible. Perhaps grabbing some grub in the cafeteria might power your way through the rest of the school? As you step into the cafeteria, the pungent aroma of soup engulfs your nostrils and fills your head with craving. You dip your finger into the soup and taste it. It has an oddly metallic taste.');
 
     $('#item_1').css({ //pot of soup & doorkey
         top: 50,

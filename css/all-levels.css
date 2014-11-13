@@ -22,6 +22,10 @@ h2 {
     font-size: 2em;
 }
 
+.clickable p {
+    visibility: hidden;
+}
+
 p {
     font-size: 2em;
     font-weight: 700;
@@ -60,7 +64,7 @@ img {
     width: 1100px;
 }
 
-#solution {
+/*#solution {
     width: 237px;
     position: relative;
     margin-right: 10px;
@@ -70,11 +74,11 @@ img {
 #solution h2 {
     margin-top: 215px;
     margin-bottom: 215px;
-}
+}*/
 
 #scene {
     margin-right: 10px;
-    width: 621px;
+    width: 800px;
     position: relative;
 }
 #background {
@@ -85,7 +89,7 @@ img {
 
 #toolbox {
     background-color: gray;
-    width: 222px;
+    width: 290px;
 }
 #toolbox table {
     border-collapse: collapse;
@@ -104,9 +108,14 @@ td {
     margin-top: 10px;
 }
 
+#text {
+    font-size: 1em;
+}
+
 .clickable {
     margin: 0;
     background-color: gray;
+    opacity: 0.5;
     width: 150px;
     height: 150px;
     position: absolute;
