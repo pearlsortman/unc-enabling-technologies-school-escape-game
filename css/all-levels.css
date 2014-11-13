@@ -7,64 +7,64 @@ html, body {
     background-color: #00030f;
     background-image: url(http://www.transparenttextures.com/patterns/padded.png);
 }
+
 h1, h2 {
     font-family: 'Bangers', cursive;
     padding: 0;
     margin: 0;
 }
+
 h1 {
-    font-size: 4em;
+    font-size: 3em;
 }
+
 h2 {
     font-size: 2em;
 }
+
 p {
     font-size: 2em;
     font-weight: 700;
 }
+
 div {
     padding: 0px;
     margin: 0px;
     width: 100%;
 }
+
 img {
     max-width: 100%;
     max-height: 100%;
 }
 
 .primaryDiv {
-    display: table;
-    width: 80%;
+    display: block;
+    width: 1100px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .secondaryDiv {
     float: left;
 }
 
 #header {
-    padding: 20px;
-    height: 75px;
+    padding: 10px;
+    height: 45px;
 }
-
 
 #main {
-    height: 600px;
+    height: 525px;
+    text-align: center;
+    width: 1100px;
 }
-#main .secondary {
-    position: relative;
-    float: left;
-    margin: auto;
-    height: 600px;
-    vertical-align: top;
-    border: thin white solid;
-}
+
 #solution {
-    background-color: blue;
-    width: 15%;
+    width: 237px;
     position: relative;
     margin-right: 10px;
-    height: 600px;
+    height: 525px;
 }
 
 #solution h2 {
@@ -74,33 +74,34 @@ img {
 
 #scene {
     margin-right: 10px;
-    width: 55%;
+    width: 621px;
     position: relative;
 }
 #background {
     display: block;
-    height: 600px;
+    height: 525px;
     width: 100%;
 }
+
 #toolbox {
     background-color: gray;
-    width: 15%;
+    width: 222px;
 }
 #toolbox table {
     border-collapse: collapse;
     width: 100%;
-    height: 70%;
-    vertical-align: baseline;
 }
+
 td {
     border: solid thick white;
-    height: 180px;
+    height: 155px;
 }
 
 
 #commentary {
     background: red;
-    height: 200px;
+    height: 100px;
+    margin-top: 10px;
 }
 
 .clickable {
@@ -113,6 +114,7 @@ td {
 .hidden {
     visibility: hidden;
 }
+
 .entered, :focus {
-    border: solid yellow thick;
+    background-color: yellow;
 }
