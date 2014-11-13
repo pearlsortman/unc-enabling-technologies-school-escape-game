@@ -4,6 +4,8 @@
 <title>School Escape</title>
 
 <head>
+	<link href="css/transition.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="js/fasw.transitions.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="css/index.css"></link>
 	<link href='http://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Bangers' rel='stylesheet' type='text/css'>
 </head>
@@ -14,18 +16,14 @@
 		<h2>Find your way back to the outside world.</h2>
 	</div>	
 	<div class="container">				 															
-		<div class="choicebutton" id="demo">
-			<div class="middle">
-				<img src="images/speechbubble.jpg">
-				<a href="demo.php">demo</a>
-			</div>
-		</div>		
-		<div class="choicebutton" id="play">
-			<div class="middle">
-				<img src="images/speechbubble.jpg">
-				<a href="L1.php">play</a>
-			</div>
-		</div>
+		<a trans="slide" class="choicebutton" id="demo" href="index.html">
+			<img src="images/speechbubble-v1.png">
+			<h3>demo</h3>
+		</a>		
+		<a trans="slide" class="choicebutton" id="play" href="L1.php">
+			<img src="images/speechbubble-v1.png">
+			<h3>play</h3>
+		</a>
 	</div>
 </body>
 

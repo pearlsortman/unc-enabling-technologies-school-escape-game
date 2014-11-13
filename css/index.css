@@ -3,13 +3,11 @@ body {
 	padding: 0;
 	text-align: center;
 	font-family: 'Bangers', cursive;
+	color: white;
 	background-color: #00030f;
 	background-image: url(http://www.transparenttextures.com/patterns/padded.png);
 }	
 
-h1, h2 {
-	color: white;
-}
 h1 {
 	font-size: 8em;
 	margin-top: 70px;
@@ -22,10 +20,10 @@ h2 {
 	color: gray;
 	margin-bottom: 40px;
 }
-a {
+h3 {
 	font-size: 5em;
-	color: white;
-	text-decoration: none;
+	position: relative;
+	top: -275px;
 }
 div {
 	padding-top: 20px;
@@ -33,19 +31,21 @@ div {
 	vertical-align: middle;
 	float: none;
 }
+a {
+	text-decoration: none;
+	color: white;
+}
 
 .header, .container, .footer {
-	width: 60%;
+	width: 800px;
 	margin: auto;
 	padding: 0;
 }
 
 .choicebutton {
 	display: inline-block;
-	width: 30%;
+	width: 350px;
 	height: 250px;
-	margin-left: 20px;
-	margin-right: 20px;
 	text-align: center;
 	padding: 0;
 	border-radius: 40px;
@@ -55,15 +55,14 @@ div {
 	color: red;
 }
 
-.middle {
-	display: table-cell;
-	height: 250px;
-	padding: 0;
-	width: 238px;
+#demo {
+	float: left;
+}
+#play {
+	float: right;
 }
 
 img {
 	position: relative;
 	width: 100%;
-	z-index: -1;
 }

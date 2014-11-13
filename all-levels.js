@@ -24,7 +24,7 @@ $(document).ready(function() {
         if (currentObject.is('#solution')) {
             changeCommentary(getSolution());
         } else if (currentFirstChild.hasClass('dummy')) {
-            changeCommentary('nothing under the ' + currentFirstChild.id + ', keep looking');
+            changeCommentary('nothing under the ' + currentFirstChild + ', keep looking');
         } else if (currentFirstChild.hasClass('tool')) {
             moveToToolbox(currentFirstChild);
             currentObject.remove();
@@ -45,7 +45,7 @@ function moveToToolbox(tool) {
     inToolbox.push(insertInToolbox);
     nextOpen++;
 
-    changeCommentary('(generic1) you have sucessfully added the ' + insertInToolbox + ' into your toolbox');
+    changeCommentary('you have sucessfully added the ' + insertInToolbox + ' into your toolbox');
 };
 
 function changeCommentary(text) {
@@ -63,7 +63,7 @@ function isGameOver() {
     if (gameOver) {
         var nextLevel = getLevel() + 1;
         var nextLevelLink = 'L' + nextLevel + '.php';
-        changeCommentary('(generic2) Congratulations! You made it to level ' + nextLevel);
+        changeCommentary('Congratulations! You made it to level ' + nextLevel);
         if (nextLevel <= 8) {
             setTimeout(function() {
                 window.location.replace(nextLevelLink);
