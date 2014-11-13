@@ -33,13 +33,13 @@ img {
 }
 
 .primaryDiv {
-   /* display: table;*/
+    display: table;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 .secondaryDiv {
-/*    display: table-cell;*/
+    float: left;
 }
 
 #header {
@@ -62,7 +62,16 @@ img {
 #solution {
     background-color: blue;
     width: 15%;
+    position: relative;
+    margin-right: 10px;
+    height: 600px;
 }
+
+#solution h2 {
+    margin-top: 215px;
+    margin-bottom: 215px;
+}
+
 #scene {
     margin-right: 10px;
     width: 55%;
@@ -85,6 +94,7 @@ img {
 }
 td {
     border: solid thick white;
+    height: 180px;
 }
 
 
