@@ -2,11 +2,11 @@ $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 2: The Cafeteria');
-    $('#scene').prepend('<img src="images/L2.jpg"/>');
-    $('#item_1').attr('tabindex', '1').append('<p class="covering" id="souppot">pot of soup</p><p class="hidden tool" id="doorkey">doorkey</p>');
-    $('#item_2').attr('tabindex', '2').append('<p class="dummy" id="lunchtray">lunch tray</p>');
-    $('#item_3').attr('tabindex', '3').append('<p class="tool" id="ladle">ladle</p>');
-    $('#item_4').attr('tabindex', '4').append('<p class="covering" id="exit">door</p>');
+    $('#background').attr('src', 'images/L2.jpg');
+    $('#item_1').attr('class', 'clickable', 'tabindex', '1').append('<p class="covering" id="souppot"><img src="images/item.jpg">pot of soup</p><p class="hidden tool" id="doorkey"><img src="images/item.jpg">doorkey</p>');
+    $('#item_2').attr('class', 'clickable', 'tabindex', '2').append('<p class="dummy" id="lunchtray">lunch tray</p>');
+    $('#item_3').attr('class', 'clickable', 'tabindex', '3').append('<p class="tool" id="ladle"><img src="images/item.jpg">ladle</p>');
+    $('#item_4').attr('class', 'clickable', 'tabindex', '4').append('<p class="covering" id="exit"><img src="images/item.jpg">door</p>');
     changeCommentary('L2: initial room blurb');
 
     $('#item_1').css({ //pot of soup & doorkey

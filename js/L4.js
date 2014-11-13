@@ -2,12 +2,12 @@ $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 4: The Math Classroom');
-    $('#scene').prepend('<img src="images/L4.jpg"/>');
-    $('#item_1').attr('tabindex', '1').append('<p class="covering" id="equation">equation</p><p class="hidden tool" id="answer">answer</p>');
-    $('#item_2').attr('tabindex', '2').append('<p class="dummy" id="poster">math poster</p>');
-    $('#item_3').attr('tabindex', '3').append('<p class="tool" id="mathbook">mathbook</p>');
-    $('#item_4').attr('tabindex', '4').append('<p class="covering" id="safe">safe</p><p class="hidden tool" id="doorkey">doorkey</p>');
-    $('#item_5').attr('tabindex', '5').append('<p id="exit">door</p>');
+    $('#background').attr('src', 'images/L4.jpg');
+    $('#item_1').attr('class', 'clickable', 'tabindex', '1').append('<p class="covering" id="equation">equation</p><p class="hidden tool" id="answer">answer</p>');
+    $('#item_2').attr('class', 'clickable', 'tabindex', '2').append('<p class="dummy" id="poster">math poster</p>');
+    $('#item_3').attr('class', 'clickable', 'tabindex', '3').append('<p class="tool" id="mathbook">mathbook</p>');
+    $('#item_4').attr('class', 'clickable', 'tabindex', '4').append('<p class="covering" id="safe">safe</p><p class="hidden tool" id="doorkey">doorkey</p>');
+    $('#item_5').attr('class', 'clickable', 'tabindex', '5').append('<p id="exit">door</p>');
     changeCommentary('L4: initial room blurb');
 
     $('#item_1').css({ //equation & answer

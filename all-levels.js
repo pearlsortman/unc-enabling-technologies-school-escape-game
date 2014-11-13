@@ -5,26 +5,26 @@ var inToolbox = [];
 
 $(document).ready(function() {
 
-    $('.clickable, .dummy').on('mouseenter mouseleave', function() {
+    $('.clickable').on('mouseenter mouseleave', function() {
         $(this).toggleClass('entered');
     });
 
     //triggers click event on enterkey
-    $('.clickable, .dummy').keydown(function(e) {
+    $('.clickable').keydown(function(e) {
         if (e.keyCode == 13) {
             $(this).trigger('click');
         }
     });
 
     //click event
-    $('.clickable, .dummy').click(function() {
+    $('.clickable').click(function() {
         var currentObject = $(this);
         var currentFirstChild = currentObject.children('p:first');
 
         if (currentObject.is('#solution')) {
             changeCommentary(getSolution());
         } else if (currentFirstChild.hasClass('dummy')) {
-            changeCommentary('nothing under the ' + currentFirstChild.text() + ', keep looking');
+            changeCommentary('nothing under the ' + currentFirstChild.id + ', keep looking');
         } else if (currentFirstChild.hasClass('tool')) {
             moveToToolbox(currentFirstChild);
             currentObject.remove();
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 function moveToToolbox(tool) {
     var openToolboxCell = '#toolboxItem_' + nextOpen;
-    var insertInToolbox = $(tool).text();
+    var insertInToolbox = $(tool).id;
 
     $(openToolboxCell).text(insertInToolbox);
     inToolbox.push(insertInToolbox);

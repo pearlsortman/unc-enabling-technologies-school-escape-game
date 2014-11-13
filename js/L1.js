@@ -2,10 +2,10 @@ $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 1: The Classroom');
-    $('#scene').prepend('<img src="images/L1.jpg"/>');
-    $('#item_1').attr('tabindex', '1').append('<p class="covering" id="fishbowl">fishbowl</p><p class="hidden tool" id="doorkey">doorkey</p>');
-    $('#item_2').attr('tabindex', '2').append('<p class="dummy" id="desk">desk</p>');
-    $('#item_3').attr('tabindex', '3').append('<p class="covering" id="exit">door</p>');
+    $('#background').attr('src', 'images/L1.jpg');
+    $('#item_1').append('<p class="covering" id="fishbowl"><img src="images/item.jpg">fishbowl</p><p class="hidden tool" id="doorkey"><img src="images/item.jpg">doorkey</p>');
+    $('#item_2').append('<p class="dummy" id="desk">desk</p>');
+    $('#item_3').append('<p class="covering" id="exit"><img src="images/item.jpg">door</p>');
     changeCommentary('L1: initial room blurb');
 
     $('#item_1').css({ //fishbowl & doorkey
@@ -30,10 +30,10 @@ function clickityClick(currentObject, currentFirstChild) {
         if (($.inArray('doorkey', inToolbox)) > -1) {
             gameOver = true;
         } else {
-            changeCommentary('(1d) sorry, you need the key first');
+            changeCommentary('sorry, you need the key first');
         }
     } else if (currentFirstChild.is('#fishbowl')) {
-        changeCommentary('(1e) you found the key');
+        changeCommentary('you found the key');
         removeObject(currentFirstChild);
     }
 
@@ -41,11 +41,11 @@ function clickityClick(currentObject, currentFirstChild) {
 
 function getLevel() {
     return 1;
-}
+};
 
 function getSolution() {
     var s1 = '1: find key in fishbowl; ';
     var s2 = '2: add key to toolbox; ';
     var s3 = '3: get to the door with key in toolbox';
     return s1 + s2 + s3;
-}
+};
