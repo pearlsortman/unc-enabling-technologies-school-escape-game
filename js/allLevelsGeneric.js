@@ -4,7 +4,6 @@ var inToolbox = [];
 //add timer!!!!!
 
 $(document).ready(function() {
-    alert('working');
 
     $('.clickable').on('mouseenter mouseleave', function() {
         $(this).toggleClass('entered');

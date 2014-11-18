@@ -4,8 +4,8 @@ $(document).ready(function() {
     $('#header h1').text('Level 4: The Math Classroom');
     $('#background').attr('src', 'images/L4.jpg');
 
-    $('#item_1').append('<p class="covering" id="equation">equation<img src"images/equation.png">\
-                        </p><p class="hidden tool" id="answer">answer<img src="images/answer.png"></p>');
+    $('#item_1').append('<p class="covering" id="equation">equation<img src"images/equation.png"></p>\
+                        <p class="hidden tool" id="answer">answer<img src="images/answer.png"></p>');
 
     $('#item_2').append('<p class="dummy" id="poster">math poster</p>');
 
