@@ -22,14 +22,14 @@ $(document).ready(function() {
         width: 200
     });
     $('#item_2').css({ //desk
-        top: 250,
-        left: 150,
+        top: 275,
+        left: 125,
         height: 200
     });
     $('#item_3').css({ //door
         top: 20,
-        left: 10,
-        height: 300
+        left: 0,
+        height: 325
     });
 
 });
@@ -40,7 +40,7 @@ function clickityClick(currentObject, currentFirstChild) {
 
     if (current.is('#exit')) {
         if (($.inArray('doorkey', inToolbox)) > -1) {
-            gameOver = true;
+            levelOver = true;
         } else {
             changeCommentary('sorry, you need the key first');
         }

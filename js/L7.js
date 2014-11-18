@@ -62,7 +62,7 @@ function clickityClick(currentObject, currentFirstChild) {
 
     if (current.is('#')) { //EXIT
         if (($.inArray('', inToolbox)) > -1) {
-            gameOver = true;
+            levelOver = true;
         } else {
             changeCommentary('');
         }

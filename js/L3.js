@@ -34,7 +34,7 @@ function clickityClick(currentObject, currentFirstChild) {
 
     if (current.is('#computer')) { //EXIT
         if (($.inArray('powercord', inToolbox)) > -1) {
-            gameOver = true;
+            levelOver = true;
         } else {
             changeCommentary('(4c) ');
         }

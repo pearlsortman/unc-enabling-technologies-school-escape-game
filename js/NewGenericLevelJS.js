@@ -5,6 +5,13 @@ var inToolbox = [];
 
 $(document).ready(function() {
 
+    //triggers tab event on spacebar
+    $('.clickable').keydown(function(e) {
+        if (e.keyCode == 13) {
+            $(this).trigger('click');
+        }
+    });
+
     $('.clickable').on('mouseenter mouseleave', function() {
         $(this).toggleClass('entered');
     });
@@ -24,7 +31,7 @@ $(document).ready(function() {
         if (currentObject.is('#solution')) {
             changeCommentary(getSolution());
         } else if (currentFirstChild.hasClass('dummy')) {
-            changeCommentary('nothing under the ' + currentFirstChild + ', keep looking');
+            changeCommentary('nothing under the ' + currentFirstChild.text() + ', keep looking');
         } else if (currentFirstChild.hasClass('tool')) {
             moveToToolbox(currentFirstChild);
             currentObject.remove();
@@ -39,7 +46,7 @@ $(document).ready(function() {
 
 function moveToToolbox(tool) {
     var openToolboxCell = '#toolboxItem_' + nextOpen;
-    var insertInToolbox = $(tool).id;
+    var insertInToolbox = $(tool).text();
 
     $(openToolboxCell).text(insertInToolbox);
     inToolbox.push(insertInToolbox);
@@ -62,25 +69,14 @@ function removeObject(currentFirstChild) {
 function isLevelOver() {
     if (levelOver) {
         var nextLevel = getLevel() + 1;
-        changeCommentary('Congratulations! You made it to level ' + nextLevel);
-
-        if (nextLevel === 2) {
-            $.getScript('js/L2.js');
-            level2();
-        } else if (nextLevel === 3) {
-            level3();
-        } else if (nextLevel === 4) {
-            level4();
-        } else if (nextLevel === 5) {
-            level5();
-        } else if (nextLevel === 6) {
-            level6();
-        } else if (nextLevel === 7) {
-            level7();
-        } else if (nextLevel === 8) {
-            level8();
+        var nextLevelLink = 'L' + nextLevel + '.php';
+        if (nextLevel < 9) {
+            changeCommentary('Congratulations! You made it to level ' + nextLevel);
+            setTimeout(function(){
+                window.location.replace(nextLevelLink);
+            }, 5000);
         } else {
-            changeCommentary('you made it to the end!');
+            changeCommentary('Wow, great job! You made through all the levels! Enjoy the outside world again.');
         }
     }
     return levelOver;

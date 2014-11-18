@@ -114,8 +114,9 @@ td {
 
 .clickable {
     margin: 0;
-    background-color: gray;
-    opacity: 0.5;
+    background-color: none;
+    border-radius: 10px;
+    opacity: 0.0;
     width: 150px;
     height: 150px;
     position: absolute;
@@ -125,5 +126,6 @@ td {
 }
 
 .entered, :focus {
-    background-color: yellow;
+    background-color: red;
+    opacity: 0.1;
 }

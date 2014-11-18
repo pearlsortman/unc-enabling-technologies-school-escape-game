@@ -61,7 +61,7 @@ function clickityClick(currentObject, currentFirstChild) {
 
     if (current.is('#window')) { //EXIT
         if (($.inArray('hammer', inToolbox)) > -1) {
-            gameOver = true;
+            levelOver = true;
         } else {
             changeCommentary('figure out what to use to break the window');
         }

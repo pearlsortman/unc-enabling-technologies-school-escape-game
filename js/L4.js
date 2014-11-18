@@ -42,7 +42,7 @@ function clickityClick(currentObject, currentFirstChild) {
 
     if (current.is('#exit')) {
         if (($.inArray('doorkey', inToolbox)) > -1) {
-            gameOver = true;
+            levelOver = true;
         } else {
             changeCommentary('you need the key first');
         }
