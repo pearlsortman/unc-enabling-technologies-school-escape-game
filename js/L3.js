@@ -6,7 +6,12 @@ $(document).ready(function() {
     $('#item_1').attr('class', 'clickable', 'tabindex', '1').append('<p class="covering" id="lockbox">lockbox</p><p class="hidden tool" id="powercord">powercord</p>');
     $('#item_2').attr('class', 'clickable', 'tabindex', '2').append('<p class="covering" id="desk">desk</p><p class="hidden tool" id="screwdriver">screwdriver</p>');
     $('#item_3').attr('class', 'clickable', 'tabindex', '3').append('<p id="computer">computer</p>');
-    changeCommentary('As you whip open the door of the cafeteria, you feel the floor slip out from underneath your feet. You slide across the hallway on your bum, catching a glimpse of the “Wet Floor” sign out of the corner of your eye. When you finally stop sliding, you take a moment to take in your surroundings. Computers. Everywhere. The door clicks shut behind you. Here we go again…');
+
+    changeCommentary('As you whip open the door of the cafeteria, \
+            you feel the floor slip out from underneath your feet. \
+            You slide across the hallway on your bum, catching a glimpse of the “Wet Floor” \
+            sign out of the corner of your eye. When you finally stop sliding, you take a moment to take in your surroundings. \
+            Computers. Everywhere. The door clicks shut behind you. Here we go again…');
 
     $('#item_1').css({ //lockbox & powercord
         top: 50,
@@ -20,6 +25,7 @@ $(document).ready(function() {
         top: 300,
         left: 350
     });
+
 });
 
 function clickityClick(currentObject, currentFirstChild) {

@@ -1,5 +1,5 @@
 var nextOpen = 1;
-var gameOver = false;
+var levelOver = false;
 var inToolbox = [];
 //add timer!!!!!
 
@@ -32,7 +32,7 @@ $(document).ready(function() {
             clickityClick(currentObject, currentFirstChild);
         }
        
-        isGameOver();
+        isLevelOver();
     });
 
 });
@@ -59,16 +59,29 @@ function removeObject(currentFirstChild) {
     currentFirstChild.removeClass('hidden');
 };
 
-function isGameOver() {
-    if (gameOver) {
+function isLevelOver() {
+    if (levelOver) {
         var nextLevel = getLevel() + 1;
-        var nextLevelLink = 'L' + nextLevel + '.php';
         changeCommentary('Congratulations! You made it to level ' + nextLevel);
-        if (nextLevel <= 8) {
-            setTimeout(function() {
-                window.location.replace(nextLevelLink);
-            }, 2000);
+
+        if (nextLevel === 2) {
+            $.getScript('js/L2.js');
+            level2();
+        } else if (nextLevel === 3) {
+            level3();
+        } else if (nextLevel === 4) {
+            level4();
+        } else if (nextLevel === 5) {
+            level5();
+        } else if (nextLevel === 6) {
+            level6();
+        } else if (nextLevel === 7) {
+            level7();
+        } else if (nextLevel === 8) {
+            level8();
+        } else {
+            changeCommentary('you made it to the end!');
         }
     }
-    return gameOver;
+    return levelOver;
 };

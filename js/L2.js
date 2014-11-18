@@ -7,7 +7,11 @@ $(document).ready(function() {
     $('#item_2').attr('class', 'clickable').append('<p class="dummy" id="lunchtray">lunch tray</p>');
     $('#item_3').attr('class', 'clickable').append('<p class="tool" id="ladle"><img src="images/item.jpg">ladle</p>');
     $('#item_4').attr('class', 'clickable', 'tabindex', '4').append('<p class="covering" id="exit">door</p>');
-    changeCommentary('Getting out of that classroom burned more calories than you thought was possible. Perhaps grabbing some grub in the cafeteria might power your way through the rest of the school? As you step into the cafeteria, the pungent aroma of soup engulfs your nostrils and fills your head with craving. You dip your finger into the soup and taste it. It has an oddly metallic taste.');
+
+    changeCommentary('Getting out of that classroom burned more calories than you thought was possible. \
+        Perhaps grabbing some grub in the cafeteria might power your way through the rest of the school? \
+        As you step into the cafeteria, the pungent aroma of soup engulfs your nostrils and fills your head with craving. \
+        You dip your finger into the soup and taste it. It has an oddly metallic taste.');
 
     $('#item_1').css({ //pot of soup & doorkey
         top: 50,
@@ -25,7 +29,9 @@ $(document).ready(function() {
         top: 300,
         left: 550
     });
+    
 });
+
 
 function clickityClick(currentObject) {
     this.currentObject = currentObject;

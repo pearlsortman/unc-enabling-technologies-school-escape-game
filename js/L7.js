@@ -12,7 +12,13 @@ $(document).ready(function() {
     $('#item_6').attr('class', 'clickable', 'tabindex', '6').append('<p></p>');
     $('#item_7').attr('class', 'clickable', 'tabindex', '7').append('<p></p>');
     $('#item_8').attr('class', 'clickable', 'tabindex', '8').append('<p></p>');
-    changeCommentary('At this point, you begin to think that you will never make it to recess and that you are merely the subject of some cruel, puzzling game with level after level. You walk out of the art room into the now familiar hallway. But wait! It’s not a familiar hallway. Oh no no no. The once dull gray walls have changed into a flamboyant and striking orange hue. You smell a faint fragrance of gasoline and take a step back in amazement as, what can only be described as, a leprechaun jumps in your path wags its finger');
+
+    changeCommentary('At this point, you begin to think that you will never make it to recess and \
+            that you are merely the subject of some cruel, puzzling game with level after level. \
+            You walk out of the art room into the now familiar hallway. But wait! It’s not a familiar hallway. \
+            Oh no no no. The once dull gray walls have changed into a flamboyant and striking orange hue. \
+            You smell a faint fragrance of gasoline and take a step back in amazement as, what can only be described as, \
+            a leprechaun jumps in your path wags its finger');
 
     $('#item_1').css({ //
         top: 50,
@@ -46,6 +52,8 @@ $(document).ready(function() {
         top: 75,
         left: 400
     });
+
+
 });
 
 function clickityClick(currentObject, currentFirstChild) {

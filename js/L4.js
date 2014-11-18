@@ -8,7 +8,10 @@ $(document).ready(function() {
     $('#item_3').attr('class', 'clickable', 'tabindex', '3').append('<p class="tool" id="mathbook">mathbook</p>');
     $('#item_4').attr('class', 'clickable', 'tabindex', '4').append('<p class="covering" id="safe">safe</p><p class="hidden tool" id="doorkey">doorkey</p>');
     $('#item_5').attr('class', 'clickable', 'tabindex', '5').append('<p id="exit">door</p>');
-    changeCommentary('You finally get out of the computer lab. The sheer difficulty and complexity of escaping from the computer lab has bewildered you so much that you make a wrong turn and find yourself confined in another classroom, this one decorated in… numbers?');
+
+    changeCommentary('You finally get out of the computer lab. The sheer difficulty and \
+            complexity of escaping from the computer lab has bewildered you so much that you \
+            make a wrong turn and find yourself confined in another classroom, this one decorated in… numbers?');
 
     $('#item_1').css({ //equation & answer
         top: 50,
@@ -30,6 +33,7 @@ $(document).ready(function() {
         top: 75,
         left: 500
     });
+
 });
 
 function clickityClick(currentObject, currentFirstChild) {

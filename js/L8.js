@@ -46,6 +46,7 @@ $(document).ready(function() {
         top: 75,
         left: 400
     });
+
 });
 
 function clickityClick(currentObject, currentFirstChild) {

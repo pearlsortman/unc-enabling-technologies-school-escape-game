@@ -12,7 +12,13 @@ $(document).ready(function() {
     $('#item_6').attr('class', 'clickable', 'tabindex', '6').append('<p class="tool" id="paper">paper</p>');
     $('#item_7').attr('class', 'clickable', 'tabindex', '7').append('<p class="covering" id="cabinet">cabinet</p><p class="hidden tool" id="hammer">hammer</p>');
     $('#item_8').attr('class', 'clickable', 'tabindex', '8').append('<p id="window">window</p>');
-    changeCommentary('Success! You are able to leave the Principal’s Office. Last time you were there, you definitely did not leave in one piece (or in peace). Walking through the hallway, you suddenly feel the floor slip out from beneath your feet. You slide across the hallway on your bum, catching a glimpse of the “Wet Floor” sign out of the corner of your eye. Simultaneously, you think “How dare the writer recycle the same transition between rooms in order to save time.” As you ponder this obviously false and ludicrous inquiry, you find yourself locked in an art room.');
+
+    changeCommentary('Success! You are able to leave the Principal’s Office. Last time you were there, \
+            you definitely did not leave in one piece (or in peace). Walking through the hallway, you suddenly \
+            feel the floor slip out from beneath your feet. You slide across the hallway on your bum, catching a \
+            glimpse of the “Wet Floor” sign out of the corner of your eye. Simultaneously, you think “How dare the writer \
+            recycle the same transition between rooms in order to save time.” As you ponder this obviously false and \
+            ludicrous inquiry, you find yourself locked in an art room.');
 
     $('#item_1').css({ //
         top: 50,
@@ -46,6 +52,7 @@ $(document).ready(function() {
         top: 75,
         left: 400
     });
+
 });
 
 function clickityClick(currentObject, currentFirstChild) {
@@ -59,7 +66,7 @@ function clickityClick(currentObject, currentFirstChild) {
             changeCommentary('figure out what to use to break the window');
         }
     } else if (current.is('#desk')) {
-        if ( (($.inArray('pencil', inToolbox))>-1) && (($.inArray('paper', inToolbox))>-1) ) {
+        if ((($.inArray('pencil', inToolbox)) > -1) && (($.inArray('paper', inToolbox)) > -1)) {
             changeCommentary('somethings happening! watch the rubbing from the desk reveal a secret combination');
             removeObject(current);
         } else {
