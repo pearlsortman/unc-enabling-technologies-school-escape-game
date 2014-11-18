@@ -6,9 +6,9 @@ $(document).ready(function() {
     $('#item_1').attr('class', 'clickable').append('\
         <p class="covering" id="souppot">pot of soup<img src="images/item.jpg"></p>\
         <p class="hidden tool" id="doorkey">doorkey<img src="images/key.png"></p>');
-    $('#item_2').attr('class', 'clickable').append('<p class="dummy" id="lunchtray">lunch tray</p>');
-    $('#item_3').attr('class', 'clickable').append('<p class="tool" id="ladle"><img src="images/item.jpg">ladle</p>');
-    $('#item_4').attr('class', 'clickable', 'tabindex', '4').append('<p class="covering" id="exit">door</p>');
+    $('#item_2').append('<p class="dummy" id="lunchtray">lunch tray</p>');
+    $('#item_3').append('<p class="tool" id="ladle"><img src="images/item.jpg">ladle</p>');
+    $('#item_4').attr('class', 'clickable').attr('tabindex', '4').append('<p class="covering" id="exit">door</p>');
 
     changeCommentary('Getting out of that classroom burned more calories than you thought was possible. \
         Perhaps grabbing some grub in the cafeteria might power your way through the rest of the school? \
@@ -37,23 +37,26 @@ $(document).ready(function() {
     
 });
 
+function clickityClick(currentLayer) {
+    var currentP = currentLayer.children('p:first');
 
-function clickityClick(currentObject) {
-    this.currentObject = currentObject;
-    var currentFirstChild = currentObject.children('p:first');
-
-    if (currentFirstChild.is('#exit')) {
+    if (currentP.is('#exit')) {
         if (($.inArray('doorkey', inToolbox)) > -1) {
             levelOver = true;
         } else {
             changeCommentary('sorry, you need the key first');
         }
-    } else if (currentFirstChild.is('#souppot')) {
-        if (($.inArray('ladle', inToolbox)) > -1) {
-            changeCommentary('you found the key. now add it to your toolbox.');
-            removeObject(currentFirstChild);
-        } else {
-            changeCommentary('oh no the soup is too hot! we need something to scoop out the tool');
+
+    } else {
+        var currentImg = currentP.children('img:first');
+
+        if (currentP.is('#souppot')) {
+            if (($.inArray('ladle', inToolbox)) > -1) {
+                removeObjectLayerWithImage(currentLayer, currentP, currentImg);
+                changeCommentary('you found the key. now add it to your toolbox.');
+            } else {
+                changeCommentary('oh no the soup is too hot! we need something to scoop out the tool');
+            }
         }
     }
 };

@@ -124,11 +124,16 @@ td {
     height: 150px;
     position: absolute;
 }
+
+.clickable img {
+    opacity: 1.0;
+}
+
 .hidden {
     visibility: hidden;
 }
 
 .entered, :focus {
-    background-color: red;
-    opacity: 0.1;
+    background-color:rgba(255,0,0,0.1);
+    outline: none;
 }

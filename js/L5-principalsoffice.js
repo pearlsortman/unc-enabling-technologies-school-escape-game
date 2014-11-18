@@ -3,10 +3,12 @@ $(document).ready(function() {
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 5: Principals Office');
     $('#background').attr('src', 'images/L5.jpg');
+    
     //activate items to be used by adding tab order and contents
-    $('#item_1').attr('class', 'clickable', 'tabindex', '1').append('<p class="dummy" id="desk">desk</p>');
-    $('#item_2').attr('class', 'clickable', 'tabindex', '2').append('<p></p>');
-    $('#item_3').attr('class', 'clickable', 'tabindex', '3').append('<p></p>');
+    $('#item_1').append('<p class="dummy" id="desk">desk</p>');
+    $('#item_2').append('<p></p>');
+    $('#item_3').append('<p></p>');
+
     $('#item_4').attr('class', 'clickable', 'tabindex', '4').append('<p></p>');
     $('#item_5').attr('class', 'clickable', 'tabindex', '5').append('<p</p>');
     $('#item_6').attr('class', 'clickable', 'tabindex', '6').append('<p></p>');

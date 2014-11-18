@@ -4,20 +4,7 @@ var inToolbox = [];
 //add timer!!!!!
 
 $(document).ready(function() {
-
-    /*    $('.clickable').keydown(function(e) {
-            if (e.keyCode == 32) {
-                e.which = 9;
-                $(this).trigger(e);
-            }
-        });*/
-
-    //triggers tab event on spacebar
-    $('.clickable').keydown(function(e) {
-        if (e.keyCode == 13) {
-            $(this).trigger('click');
-        }
-    });
+    alert('working');
 
     $('.clickable').on('mouseenter mouseleave', function() {
         $(this).toggleClass('entered');
@@ -58,12 +45,15 @@ $(document).ready(function() {
 
 
 function removeObjectLayer(currentLayer, removeP) {
-    alert('removeP html: ' + removeP.html());
     removeP.remove();
-
     currentP = currentLayer.children('p:first');
-    alert('the new p child html: ' + currentP.html());
+    currentP.removeClass('hidden');
+};
 
+function removeObjectLayerWithImage(currentLayer, removeP, removeImg) {
+    removeP.remove();
+    removeImg.remove();
+    currentP = currentLayer.children('p:first');
     currentP.removeClass('hidden');
 };
 

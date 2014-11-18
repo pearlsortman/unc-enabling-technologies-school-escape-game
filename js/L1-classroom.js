@@ -35,11 +35,9 @@ $(document).ready(function() {
 });
 
 function clickityClick(currentLayer) {
-    var currentLayer = currentLayer;
     var currentP = currentLayer.children('p:first');
     
     if (currentP.is('#exit')) {
-
         if (($.inArray('doorkey', inToolbox)) > -1) {
             levelOver = true;
         } else {
@@ -47,17 +45,11 @@ function clickityClick(currentLayer) {
         }
 
     } else {
-        var currentImg = currentP.children('img:last');
-
         if (currentP.is('#fishbowl')) {
             removeObjectLayer(currentLayer, currentP);
             changeCommentary('you found the key');
-        } else {
-            //continue game
         }
-
     }
-
 };
 
 function getLevel() {

@@ -6,4 +6,4 @@ $(document).ready(function() {
 
 function whatNow() {
 	// ready to play or watch demo again?
-}
+};
