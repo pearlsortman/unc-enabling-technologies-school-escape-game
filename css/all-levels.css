@@ -23,7 +23,8 @@ h2 {
 }
 
 .clickable p {
-    visibility: hidden;
+/*    visibility: hidden;*/
+    color: black;
 }
 
 p {
@@ -88,7 +89,8 @@ img {
 }
 
 #toolbox {
-    background-color: gray;
+    background-image: url(http://www.transparenttextures.com/patterns/padded.png);
+    background-color: red;
     width: 290px;
 }
 #toolbox table {
@@ -99,6 +101,7 @@ img {
 td {
     border: solid thick white;
     height: 155px;
+    width: 140px;
 }
 
 
@@ -114,9 +117,9 @@ td {
 
 .clickable {
     margin: 0;
-    background-color: none;
+    background-color: yellow;
     border-radius: 10px;
-    opacity: 0.0;
+    opacity: 0.5;
     width: 150px;
     height: 150px;
     position: absolute;

@@ -3,8 +3,10 @@ $(document).ready(function() {
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 3: The Computer Lab');
     $('#background').attr('src', 'images/L3.jpg');
-    $('#item_1').attr('class', 'clickable', 'tabindex', '1').append('<p class="covering" id="lockbox">lockbox</p><p class="hidden tool" id="powercord">powercord</p>');
-    $('#item_2').attr('class', 'clickable', 'tabindex', '2').append('<p class="covering" id="desk">desk</p><p class="hidden tool" id="screwdriver">screwdriver</p>');
+    $('#item_1').attr('class', 'clickable', 'tabindex', '1').append('<p class="covering" id="lockbox">lockbox</p>\
+        <p class="hidden tool" id="powercord">powercord</p>');
+    $('#item_2').attr('class', 'clickable', 'tabindex', '2').append('<p class="covering" id="desk">desk</p>\
+        <p class="hidden tool" id="screwdriver">screwdriver</p>');
     $('#item_3').attr('class', 'clickable', 'tabindex', '3').append('<p id="computer">computer</p>');
 
     changeCommentary('As you whip open the door of the cafeteria, \

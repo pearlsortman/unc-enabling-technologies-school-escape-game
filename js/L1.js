@@ -34,9 +34,10 @@ $(document).ready(function() {
 
 });
 
-function clickityClick(currentObject, currentFirstChild) {
+function clickityClick(currentObject, currentFirstChild, currentFirstChildImg) {
     this.currentObject = currentObject;
     var current = currentFirstChild;
+    var currentImg = currentFirstChildImg;
 
     if (current.is('#exit')) {
         if (($.inArray('doorkey', inToolbox)) > -1) {
@@ -46,7 +47,7 @@ function clickityClick(currentObject, currentFirstChild) {
         }
     } else if (currentFirstChild.is('#fishbowl')) {
         changeCommentary('you found the key');
-        removeObject(currentFirstChild);
+        removeObject(current, currentImg);
     }
 
 };

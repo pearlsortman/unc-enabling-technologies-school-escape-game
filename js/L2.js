@@ -3,7 +3,9 @@ $(document).ready(function() {
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 2: The Cafeteria');
     $('#background').attr('src', 'images/L2.jpg');
-    $('#item_1').attr('class', 'clickable').append('<p class="covering" id="souppot"><img src="images/item.jpg">pot of soup</p><p class="hidden tool" id="doorkey"><img src="images/item.jpg">doorkey</p>');
+    $('#item_1').attr('class', 'clickable').append('\
+        <p class="covering" id="souppot">pot of soup<img src="images/item.jpg"></p>\
+        <p class="hidden tool" id="doorkey">doorkey<img src="images/key.png"></p>');
     $('#item_2').attr('class', 'clickable').append('<p class="dummy" id="lunchtray">lunch tray</p>');
     $('#item_3').attr('class', 'clickable').append('<p class="tool" id="ladle"><img src="images/item.jpg">ladle</p>');
     $('#item_4').attr('class', 'clickable', 'tabindex', '4').append('<p class="covering" id="exit">door</p>');
@@ -14,20 +16,23 @@ $(document).ready(function() {
         You dip your finger into the soup and taste it. It has an oddly metallic taste.');
 
     $('#item_1').css({ //pot of soup & doorkey
-        top: 50,
-        left: 50
+        top: 350,
+        left: 75,
+        height: 175
     });
     $('#item_2').css({ //lunch tray
-        top: 100,
-        left: 200
+        top: 200,
+        left: 175
     });
     $('#item_3').css({ //ladle
         top: 300,
-        left: 350
+        left: 375
     });
     $('#item_4').css({ //door
-        top: 300,
-        left: 550
+        top: 25,
+        left: 575,
+        height: 250,
+        width: 175
     });
     
 });
