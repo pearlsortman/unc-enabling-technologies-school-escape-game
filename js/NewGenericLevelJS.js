@@ -32,19 +32,23 @@ $(document).ready(function() {
 
     //click event
     $('.clickable').click(function() {
-        var currentObject = $(this);
-        var currentFirstChild = currentObject.children('p:first');
-        var currentFirstChildImg = currentFirstChild.children('img:first');
-
-        if (currentObject.is('#solution')) {
+        var currentLayer = $(this);
+        var currentP = $(this).children('p:first');
+    
+        if (currentLayer.is('#solution')) {
             changeCommentary(getSolution());
-        } else if (currentFirstChild.hasClass('dummy')) {
-            changeCommentary('nothing under the ' + currentFirstChild.text() + ', keep looking');
-        } else if (currentFirstChild.hasClass('tool')) {
-            moveToToolbox(currentFirstChild, currentFirstChildImg);
-            currentObject.remove();
+
+        } else if (currentP.hasClass('dummy')) {
+            changeCommentary('nothing under the ' + currentP.text() + ', keep looking');
+
         } else {
-            clickityClick(currentObject, currentFirstChild, currentFirstChildImg);
+            var currentImg = currentP.children('img:first');
+            if (currentP.hasClass('tool')) {
+                moveToToolbox(currentP, currentImg);
+                $(this).remove();
+            } else {
+                clickityClick(currentLayer);
+            }
         }
 
         isLevelOver();
@@ -52,39 +56,32 @@ $(document).ready(function() {
 
 });
 
+
+function removeObjectLayer(currentLayer, removeP) {
+    alert('removeP html: ' + removeP.html());
+    removeP.remove();
+
+    currentP = currentLayer.children('p:first');
+    alert('the new p child html: ' + currentP.html());
+
+    currentP.removeClass('hidden');
+};
+
+
+/*
+    taking a tool and its corresponding image, called from the main click() function above
+    
+*/
 function moveToToolbox(tool, image) {
-    var openToolboxCell = '#toolboxItem_' + nextOpen;
-    var toolboxImage = image.attr('src');
-    var imageTag = '<img src="' + toolboxImage + '"" width="130">';
+    var openToolboxCell = '#toolboxItem_' + nextOpen;       // sets a variable for the exact #id of the toolbox cell to be filled
+    var toolboxImage = image.attr('src');       // gets the image from the current image in the parameters, used to place image in toolbox
 
-    $(openToolboxCell).append(imageTag);
-    inToolbox.push($(tool).text());
-    nextOpen++;
+    $(openToolboxCell).append('<img src="' + toolboxImage + '"" width="130">');
+    inToolbox.push($(tool).text()); // adds the text of the p tag with this current object to the array for searching later
+    nextOpen++;     // increments the counter keeping track of the next open cell in the toolbox table
 
-    changeCommentary('you have sucessfully added the ' + insertInToolbox + ' into your toolbox');
+    changeCommentary('you have sucessfully added the ' + $(tool).text() + ' into your toolbox');
 };
-
-
-
-function removeObject(currentText, currentImg) {
-    this.currentText = currentText;
-    this.currentImg = currentImg;
-    currentText.remove();
-    currentImg.remove();
-
-    currentFirstChild = currentObject.children('p');
-    currentFirstChildImg = currentFirstChild.children('img');
-
-    currentFirstChild.removeClass('hidden');
-    currentFirstChildImg.removeClass('hidden');
-};
-
-
-
-
-
-
-
 
 
 /*

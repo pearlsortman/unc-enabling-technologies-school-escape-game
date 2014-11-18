@@ -46,14 +46,14 @@ function clickityClick(currentObject) {
         if (($.inArray('doorkey', inToolbox)) > -1) {
             levelOver = true;
         } else {
-            changeCommentary('(2c) sorry, you need the key first');
+            changeCommentary('sorry, you need the key first');
         }
     } else if (currentFirstChild.is('#souppot')) {
         if (($.inArray('ladle', inToolbox)) > -1) {
-            changeCommentary('(2d) you found the key');
+            changeCommentary('you found the key. now add it to your toolbox.');
             removeObject(currentFirstChild);
         } else {
-            changeCommentary('(2e) oh no the soup is too hot! we need something to scoop out the tool');
+            changeCommentary('oh no the soup is too hot! we need something to scoop out the tool');
         }
     }
 };

@@ -34,20 +34,28 @@ $(document).ready(function() {
 
 });
 
-function clickityClick(currentObject, currentFirstChild, currentFirstChildImg) {
-    this.currentObject = currentObject;
-    var current = currentFirstChild;
-    var currentImg = currentFirstChildImg;
+function clickityClick(currentLayer) {
+    var currentLayer = currentLayer;
+    var currentP = currentLayer.children('p:first');
+    
+    if (currentP.is('#exit')) {
 
-    if (current.is('#exit')) {
         if (($.inArray('doorkey', inToolbox)) > -1) {
             levelOver = true;
         } else {
             changeCommentary('sorry, you need the key first');
         }
-    } else if (currentFirstChild.is('#fishbowl')) {
-        changeCommentary('you found the key');
-        removeObject(current, currentImg);
+
+    } else {
+        var currentImg = currentP.children('img:last');
+
+        if (currentP.is('#fishbowl')) {
+            removeObjectLayer(currentLayer, currentP);
+            changeCommentary('you found the key');
+        } else {
+            //continue game
+        }
+
     }
 
 };
