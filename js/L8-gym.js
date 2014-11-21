@@ -3,6 +3,7 @@ $(document).ready(function() {
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 8: Gym');
     $('#background').attr('src', 'images/L8.jpg');
+    
     //activate items to be used by adding tab order and contents
     $('#item_1').attr('class', 'clickable', 'tabindex', '1').append('<p></p>');
     $('#item_2').attr('class', 'clickable', 'tabindex', '2').append('<p></p>');
@@ -79,15 +80,15 @@ function clickityClick(currentObject, currentFirstChild) {
 
 function getLevel() {
     return 8;
-}
+};
 
 function getSolution() {
-    var s1 = '1: ; ';
-    var s2 = '2: ; ';
-    var s3 = '3: ; ';
-    var s4 = '4: ; ';
-    var s5 = '5: ; ';
-    var s6 = '6: ; ';
-    var s7 = '7: .'
+    var s1 = '1: Click the box to reveal a stash of tennis balls; ';
+    var s2 = '2: Move the tennis balls to your toolbox; ';
+    var s3 = '3: Find the sheet of paper on the floor containing a password; ';
+    var s4 = '4: Unlock the tennis ball machine using the password once you have the tennis balls; ';
+    var s5 = '5: Click the filled ball machine to have it spit out a rope into your toolbox; ';
+    var s6 = '6: Use the rope with a hook on the ceiling to attach the rope; ';
+    var s7 = '7: Click on the attached rope to climb out of the room.'
     return s1 + s2 + s3 + s4 + s5 + s6 + s7;
-}
+};

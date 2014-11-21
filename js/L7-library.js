@@ -89,12 +89,12 @@ function getLevel() {
 }
 
 function getSolution() {
-    var s1 = '1: ; ';
-    var s2 = '2: ; ';
-    var s3 = '3: ; ';
-    var s4 = '4: ; ';
-    var s5 = '5: ; ';
-    var s6 = '6: ; ';
-    var s7 = '7: .'
-    return s1 + s2 + s3 + s4 + s5 + s6 + s7;
+    var s1 = '1: click the book on the table to reveal a bookmark with a code written on it; ';
+    var s2 = '2: click on the door to the office once you have the code to unlock it. /
+                this will automatically add a slip of paper in your toolbox like you found in the office; ';
+    var s3 = '3: the slip of paper has "try the third bookshelf" written on it, so you check this out; ';
+    var s4 = '4: click on the third bookshelf to obtain the lockbox key; ';
+    var s5 = '5: use the key to unlock the box, revealing a battering ram; ';
+    var s6 = '6: use the battering ram with the locked door to plow through it.';
+    return s1 + s2 + s3 + s4 + s5 + s6;
 }
