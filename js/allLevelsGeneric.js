@@ -1,7 +1,7 @@
 var nextOpen = 1;
 var levelOver = false;
 var inToolbox = [];
-var focused = 0;
+var focused = -1;
 var focusObject;
 //add timer!!!!!
 
@@ -14,14 +14,15 @@ $(document).ready(function() {
     
     // allows keyboard accessibility with multiple key options (2-switch accessible)
     $(document).keydown(function(e) {
-        if (e.keyCode == 9 || e.keyCode == 37 || e.keyCode == 32) { // tab=9, left arrow=37, space=32 <<<< TAB KEYS
+        if (e.keyCode == 9 || e.keyCode == 39 || e.keyCode == 32) { // tab=9, right arrow=39, space=32 <<<< TAB KEYS
+
             e.preventDefault();
             $('.clickable').removeClass('entered');
             focused = (focused + 1) % $('.clickable').length;
             focusObject = $('.clickable').get(focused);
             $(focusObject).addClass('entered');
-        } else if (e.keyCode == 13 || e.keyCode == 39) { // enter=13, right arrow=39 <<<< ENTER KEYS
-            alert('enter key pressed');
+
+        } else if (e.keyCode == 13 || e.keyCode == 37) { // enter=13, left arrow=37 <<<< ENTER KEYS
             $(focusObject).trigger('click');
         }
     });

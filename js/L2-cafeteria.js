@@ -5,9 +5,9 @@ $(document).ready(function() {
     $('#background').attr('src', 'images/L2.jpg');
 
     $('#item_0').append('\
-        <p class="covering" id="souppot">pot of soup<img src="images/item.jpg"></p>\
+        <p class="covering" id="souppot">pot of soup<img src="images/souppot.png"></p>\
         <p class="hidden tool" id="doorkey">doorkey<img src="images/key.png"></p>');
-    
+
     $('#item_1').append('<p class="dummy" id="lunchtray">lunch tray</p>');
     $('#item_2').append('<p class="tool" id="ladle"><img src="images/item.jpg">ladle</p>');
     $('#item_3').attr('class', 'clickable').append('<p class="covering" id="exit">door</p>');

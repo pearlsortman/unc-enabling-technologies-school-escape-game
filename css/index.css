@@ -31,10 +31,6 @@ div {
 	vertical-align: middle;
 	float: none;
 }
-a {
-	text-decoration: none;
-	color: white;
-}
 
 .header, .container, .footer {
 	width: 800px;
@@ -65,4 +61,7 @@ a {
 img {
 	position: relative;
 	width: 100%;
+}
+.entered {
+	background-color: pink;
 }

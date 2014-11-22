@@ -4,13 +4,13 @@ $(document).ready(function() {
     $('#header h1').text('Level 3: The Computer Lab');
     $('#background').attr('src', 'images/L3.jpg');
 
-    $('#item_1').append('<p class="covering" id="lockbox">lockbox</p>\
+    $('#item_0').append('<p class="covering" id="lockbox">lockbox</p>\
         <p class="hidden tool" id="powercord">powercord<img src="images/powercord.png"></p>');
 
-    $('#item_2').append('<p class="covering" id="desk">desk</p>\
+    $('#item_1').append('<p class="covering" id="desk">desk</p>\
         <p class="hidden tool" id="screwdriver">screwdriver<img src="images/screwdriver.png"></p>');
 
-    $('#item_3').append('<p id="computer">computer</p>');
+    $('#item_2').append('<p id="computer">computer</p>');
 
     changeCommentary('As you whip open the door of the cafeteria, \
             you feel the floor slip out from underneath your feet. \
@@ -18,16 +18,16 @@ $(document).ready(function() {
             sign out of the corner of your eye. When you finally stop sliding, you take a moment to take in your surroundings. \
             Computers. Everywhere. The door clicks shut behind you. Here we go again…');
 
-    $('#item_1').css({ //lockbox & powercord
+    $('#item_0').css({ //lockbox & powercord
         top: 0,
         left: 510
     });
-    $('#item_2').css({ //desk & screwdriver
+    $('#item_1').css({ //desk & screwdriver
         top: 125,
         left: 20,
         width: 200
     });
-    $('#item_3').css({ //computer
+    $('#item_2').css({ //computer
         top: 0,
         left: 325
     });
