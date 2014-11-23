@@ -45,7 +45,7 @@ function clickityClick(currentLayer) {
         if (($.inArray('doorkey', inToolbox)) > -1) {
             levelOver = true;
         } else {
-            changeCommentary('sorry, you need the key first');
+            changeCommentary('This door is locked.');
         }
 
     } else {
@@ -54,9 +54,9 @@ function clickityClick(currentLayer) {
         if (currentP.is('#souppot')) {
             if (($.inArray('ladle', inToolbox)) > -1) {
                 removeObjectLayerWithImage(currentLayer, currentP, currentImg);
-                changeCommentary('you found the key. now add it to your toolbox.');
+                changeCommentary('You found the key.');
             } else {
-                changeCommentary('oh no the soup is too hot! we need something to scoop out the tool');
+                changeCommentary('The soup is too hot! You need something to scoop it out.');
             }
         }
     }
@@ -67,8 +67,8 @@ function getLevel() {
 };
 
 function getSolution() {
-    var s1 = '1: click on the ladle to add to toolbox; ';
-    var s2 = '2: click on the pot of soup with ladle in the toolbox to fish out the key; ';
-    var s3 = '3: click on the door with the key in toolbox';
+    var s1 = '1: Click on the ladle to add it to toolbox; ';
+    var s2 = '2: Click on the pot of soup with ladle in the toolbox to fish out the key; ';
+    var s3 = '3: Click on the door with the key in toolbox';
     return s1 + s2 + s3;
 };
