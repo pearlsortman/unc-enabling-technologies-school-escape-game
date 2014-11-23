@@ -1,18 +1,16 @@
 $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
-    $('#header h1').text('Level 3: The Computer Lab');
-    $('#background').attr('src', 'images/L3.jpg');
+    $('#header h1').text('Level 2: The Computer Lab');
+    $('#background').attr('src', 'images/L2.jpg');
 
     $('#item_0').append('<p class="covering" id="lockbox">lockbox</p>\
         <p class="hidden tool" id="powercord">powercord<img src="images/powercord.png"></p>');
-
     $('#item_1').append('<p class="covering" id="desk">desk</p>\
         <p class="hidden tool" id="screwdriver">screwdriver<img src="images/screwdriver.png"></p>');
-
     $('#item_2').append('<p id="computer">computer</p>');
 
-    changeCommentary('As you whip open the door of the cafeteria, \
+    changeCommentary('As you whip open the door of the classroom, \
             you feel the floor slip out from underneath your feet. \
             You slide across the hallway on your bum, catching a glimpse of the “Wet Floor” \
             sign out of the corner of your eye. When you finally stop sliding, you take a moment to take in your surroundings. \
@@ -63,7 +61,7 @@ function clickityClick(currentLayer) {
 };
 
 function getLevel() {
-    return 3;
+    return 2;
 };
 
 function getSolution() {

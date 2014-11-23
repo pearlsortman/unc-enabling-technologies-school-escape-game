@@ -4,43 +4,37 @@ $(document).ready(function() {
     $('#header h1').text('Level 4: The Math Classroom');
     $('#background').attr('src', 'images/L4.jpg');
 
-    $('#item_1').append('<p class="covering" id="equation">equation<img src"images/equation.png"></p>\
+    $('#item_0').append('<p class="covering" id="equation">equation<img src"images/equation.png"></p>\
                         <p class="hidden tool" id="answer">answer<img src="images/answer.png"></p>');
-
-    $('#item_2').append('<p class="dummy" id="poster">math poster</p>');
-
-    $('#item_3').append('<p class="tool" id="mathbook">mathbook<img src="images/mathbook.png"></p>');
-
-    $('#item_4').attr('class', 'clickable')
-                .attr('tabindex', '4')
-                .append('<p class="covering" id="safe">safe</p><p class="hidden tool" id="doorkey">doorkey<img src="images/key.png"></p>');
-
-    $('#item_5').attr('class', 'clickable')
-                .attr('tabindex', '5')
+    $('#item_1').append('<p class="dummy" id="poster">math poster</p>');
+    $('#item_2').append('<p class="tool" id="mathbook">mathbook<img src="images/closedbook.png"></p>');
+    $('#item_3').addClass('clickable')
+                .append('<p class="covering" id="safe">safe</p><p class="hidden tool" id="doorkey">doorkey<img src="images/doorkey.png"></p>');
+    $('#item_4').addClass('clickable')
                 .append('<p id="exit">door</p>');
 
     changeCommentary('You finally get out of the computer lab. The sheer difficulty and \
             complexity of escaping from the computer lab has bewildered you so much that you \
             make a wrong turn and find yourself confined in another classroom, this one decorated in… numbers?');
 
-    $('#item_1').css({ //equation & answer
+    $('#item_0').css({ //equation & answer
         top: 50,
         left: 200,
         width: 200
     });
-    $('#item_2').css({ //math poster
+    $('#item_1').css({ //math poster
         top: 50,
         left: 425
     });
-    $('#item_3').css({ //math book
+    $('#item_2').css({ //math book
         top: 300,
         left: 65
     });
-    $('#item_4').css({ //safe & doorkey
+    $('#item_3').css({ //safe & doorkey
         top: 75,
         left: 600
     });
-    $('#item_5').css({ //door
+    $('#item_4').css({ //door
         top: 0,
         left: 15,
         height: 300

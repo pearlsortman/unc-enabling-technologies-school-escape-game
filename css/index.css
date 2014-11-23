@@ -6,7 +6,7 @@ body {
 	color: white;
 	background-color: #00030f;
 	background-image: url(http://www.transparenttextures.com/patterns/padded.png);
-}	
+}
 
 h1 {
 	font-size: 8em;
@@ -23,7 +23,6 @@ h2 {
 h3 {
 	font-size: 5em;
 	position: relative;
-	top: -275px;
 }
 div {
 	padding-top: 20px;
@@ -32,36 +31,24 @@ div {
 	float: none;
 }
 
-.header, .container, .footer {
-	width: 800px;
+.header, .container {
+	width: 1100px;
 	margin: auto;
 	padding: 0;
 }
 
-.choicebutton {
+.clickable {
 	display: inline-block;
-	width: 350px;
+	width: 300px;
 	height: 250px;
 	text-align: center;
 	padding: 0;
 	border-radius: 40px;
+	border: 15px solid white;
+	margin: 15px;
+	background-color: #000033;
 }
 
-.choicebutton:hover {
+.entered, .clickable:hover {
 	color: red;
-}
-
-#demo {
-	float: left;
-}
-#play {
-	float: right;
-}
-
-img {
-	position: relative;
-	width: 100%;
-}
-.entered {
-	background-color: pink;
 }

@@ -2,7 +2,7 @@ var focused = -1;
 var focusObject;
 
 $(document).ready(function() {
-	alert('document is ready to go');
+
 	$('.clickable').on('mouseenter mouseleave', function() {
         $(this).toggleClass('entered');
     });
@@ -27,6 +27,8 @@ $(document).ready(function() {
         	window.location.replace('demo.php');
         } else if (this.id=='play') {
         	window.location.replace('L1.php');
+        } else if (this.id=='level') {
+            window.location.replace('choose-a-level.html');
         }
     });
 

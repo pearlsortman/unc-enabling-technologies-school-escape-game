@@ -5,14 +5,15 @@ $(document).ready(function() {
     $('#background').attr('src', 'images/L6.jpg');
 
     //activate items to be used by adding tab order and contents
-    $('#item_0').addClass('clickable').append('<p class='tool' id='pencil'>pencil<img src='images/replace.png'></p>');
-    $('#item_1').addClass('clickable').append('<p class='dummy' id='poster'>poster</p>');
-    $('#item_2').addClass('clickable').append('<p class='dummy' id='computer'>computer</p>');
-    $('#item_3').addClass('clickable').append('<p class='dummy' id='paintbrushes'>paint brushes</p>');
-    $('#item_4').addClass('clickable').append('<p class='covering' id='desk'>desk</p><p class='hidden tool' id='password'>password<img src='images/replace.png'></p>');
-    $('#item_5').addClass('clickable').append('<p class='tool' id='paper'>paper<img src='images/replace.png'></p>');
-    $('#item_6').addClass('clickable').append('<p class='covering' id='cabinet'>cabinet</p><p class='hidden tool' id='hammer'>hammer<img src='images/replace.png'></p>');
-    $('#item_7').addClass('clickable').append('<p id="window">window</p>');
+    $('#item_0').append('<p class="tool" id="pencil">pencil<img src="images/pencil.png"></p>');
+    $('#item_1').append('<p class="dummy" id="paintbrush">paintbrush<img src="paintbrush.png"></p>');
+    $('#item_2').append('<p class="covering" id="desk">desk</p><p class="hidden tool" id="password">password<img src="images/password.png"></p>');
+    $('#item_3').addClass('clickable')
+                .append('<p class="tool" id="paper">paper<img src="images/papertray.png"></p>');
+    $('#item_4').addClass('clickable')
+                .append('<p class="covering" id="cabinet">cabinet</p><p class="hidden tool" id="hammer">hammer<img src="images/hammer.png"></p>');
+    $('#item_5').addClass('clickable')
+                .append('<p id="window">window</p>');
 
     changeCommentary('Success! You are able to leave the Principal’s Office. Last time you were there, \
             you definitely did not leave in one piece (or in peace). Walking through the hallway, you suddenly \
@@ -21,45 +22,40 @@ $(document).ready(function() {
             recycle the same transition between rooms in order to save time.” As you ponder this obviously false and \
             ludicrous inquiry, you find yourself locked in an art room.');
 
-    $('#item_0').css({ //
-        top: 50,
+    $('#item_0').css({ // pencil
+        top: 150,
         left: 50
     });
-    $('#item_1').css({
-        top: 100,
-        left: 200
+    $('#item_1').css({ // paintbrush
+        top: 310,
+        left: 100
     });
-    $('#item_2').css({
-        top: 300,
-        left: 350
+    $('#item_2').css({ // desk & password
+        top: 200,
+        left: 425,
+        width: 250
     });
-    $('#item_3').css({
-        top: 300,
-        left: 550
+    $('#item_3').css({ // paper
+        top: 375,
+        left: 650
     });
-    $('#item_4').css({
-        top: 75,
-        left: 500
+    $('#item_4').css({ // cabinet & hammer
+        top: 70,
+        left:480
     });
-    $('#item_5').css({
-        top: 400,
-        left: 350
-    });
-    $('#item_6').css({
-        top: 400,
-        left: 550
-    });
-    $('#item_7').css({
-        top: 75,
-        left: 400
+    $('#item_5').css({ // window
+        top: 0,
+        left: 275,
+        width: 200,
+        height: 200
     });
 
 });
 
-function clickityClick(currentObject, currentFirstChild) {
+function clickityClick(currentLayer) {
     var currentP = currentLayer.children('p:first');
 
-    if (current.is('#window')) { //EXIT
+    if (currentP.is('#window')) { //EXIT
         if (($.inArray('hammer', inToolbox)) > -1) {
             levelOver = true;
         } else {
@@ -71,14 +67,14 @@ function clickityClick(currentObject, currentFirstChild) {
 
         if (currentP.is('#desk')) {
             if ((($.inArray('pencil', inToolbox)) > -1) && (($.inArray('paper', inToolbox)) > -1)) {
-                removeObjectLayer(currentLayer);
+                removeObjectLayer(currentLayer, currentP);
                 changeCommentary('somethings happening! watch the rubbing from the desk reveal a secret combination'); 
             } else {
                 changeCommentary('youre right, looks like theres something on the desk. keep searching for a way to reveal the writing');
             }
         } else if (currentP.is('#cabinet')) {
             if (($.inArray('password', inToolbox)) > -1) {
-                removeObjectLayer(currentLayer)
+                removeObjectLayer(currentLayer, currentP)
                 changeCommentary('good job, the password you uncovered on the desk opens this lock');
             } else {
                 changeCommentary('looks like we need the combination for this lock');

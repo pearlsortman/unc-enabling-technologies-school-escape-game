@@ -14,8 +14,8 @@ $(document).ready(function() {
     
     // allows keyboard accessibility with multiple key options (2-switch accessible)
     $(document).keydown(function(e) {
-        if (e.keyCode == 9 || e.keyCode == 39 || e.keyCode == 32) { // tab=9, right arrow=39, space=32 <<<< TAB KEYS
 
+        if (e.keyCode == 9 || e.keyCode == 39 || e.keyCode == 32) { // tab=9, right arrow=39, space=32 <<<< TAB KEYS
             e.preventDefault();
             $('.clickable').removeClass('entered');
             focused = (focused + 1) % $('.clickable').length;
@@ -29,6 +29,8 @@ $(document).ready(function() {
 
     // click event determines what to do when the focused object is click and delegates to level-specific js when needed
     $('.clickable').click(function() {
+        $('#text').css('font-size', '1.5em');
+
         var currentLayer = $(this);
         var currentP = $(this).children('p:first');
 

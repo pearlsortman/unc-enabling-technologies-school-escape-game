@@ -4,10 +4,8 @@ $(document).ready(function() {
     $('#header h1').text('Level 1: The Classroom');
     $('#background').attr('src', 'images/L1.jpg');
 
-    $('#item_0').append('\
-            <p class="covering" id="fishbowl">fishbowl</p>\
-            <p class="hidden tool" id="doorkey">doorkey<img src="images/key.png"></p>');
-
+    $('#item_0').append('<p class="covering" id="fishbowl">fishbowl</p>\
+                        <p class="hidden tool" id="doorkey">doorkey<img src="images/doorkey.png"></p>');
     $('#item_1').append('<p class="dummy" id="desk">desk</p>');
     $('#item_2').append('<p class="covering" id="exit">door</p>');
 

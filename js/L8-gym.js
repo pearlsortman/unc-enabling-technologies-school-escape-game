@@ -5,45 +5,46 @@ $(document).ready(function() {
     $('#background').attr('src', 'images/L8.jpg');
     
     //activate items to be used by adding tab order and contents
-    $('#item_1').attr('class', 'clickable', 'tabindex', '1').append('<p></p>');
-    $('#item_2').attr('class', 'clickable', 'tabindex', '2').append('<p></p>');
-    $('#item_3').attr('class', 'clickable', 'tabindex', '3').append('<p></p>');
-    $('#item_4').attr('class', 'clickable', 'tabindex', '4').append('<p></p>');
-    $('#item_5').attr('class', 'clickable', 'tabindex', '5').append('<p></p>');
-    $('#item_6').attr('class', 'clickable', 'tabindex', '6').append('<p></p>');
-    $('#item_7').attr('class', 'clickable', 'tabindex', '7').append('<p></p>');
-    $('#item_8').attr('class', 'clickable', 'tabindex', '8').append('<p></p>');
+    $('#item_0').addClass('clickable').append('<p></p>');
+    $('#item_1').addClass('clickable').append('<p></p>');
+    $('#item_2').addClass('clickable').append('<p></p>');
+    $('#item_3').addClass('clickable').append('<p></p>');
+    $('#item_4').addClass('clickable').append('<p></p>');
+    $('#item_5').addClass('clickable').append('<p></p>');
+    $('#item_6').addClass('clickable').append('<p></p>');
+    $('#item_7').addClass('clickable').append('<p></p>');
+
     changeCommentary('L8: initial room blurb');
 
-    $('#item_1').css({ //
+    $('#item_0').css({ //
         top: 50,
         left: 50
     });
-    $('#item_2').css({
+    $('#item_1').css({
         top: 100,
         left: 200
     });
-    $('#item_3').css({
+    $('#item_2').css({
         top: 300,
         left: 350
     });
-    $('#item_4').css({
+    $('#item_3').css({
         top: 300,
         left: 550
     });
-    $('#item_5').css({
+    $('#item_4').css({
         top: 75,
         left: 500
     });
-    $('#item_6').css({
+    $('#item_5').css({
         top: 400,
         left: 350
     });
-    $('#item_7').css({
+    $('#item_6').css({
         top: 400,
         left: 550
     });
-    $('#item_8').css({
+    $('#item_7').css({
         top: 75,
         left: 400
     });

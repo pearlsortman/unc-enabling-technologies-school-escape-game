@@ -1,18 +1,17 @@
 $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
-    $('#header h1').text('Level 2: The Cafeteria');
-    $('#background').attr('src', 'images/L2.jpg');
+    $('#header h1').text('Level 3: The Cafeteria');
+    $('#background').attr('src', 'images/L3.jpg');
 
-    $('#item_0').append('\
-        <p class="covering" id="souppot">pot of soup<img src="images/souppot.png"></p>\
-        <p class="hidden tool" id="doorkey">doorkey<img src="images/key.png"></p>');
-
+    $('#item_0').append('<p class="covering" id="souppot">pot of soup<img src="images/souppot.png"></p>\
+                        <p class="hidden tool" id="doorkey">doorkey<img src="images/doorkey.png"></p>');
     $('#item_1').append('<p class="dummy" id="lunchtray">lunch tray</p>');
-    $('#item_2').append('<p class="tool" id="ladle"><img src="images/item.jpg">ladle</p>');
-    $('#item_3').attr('class', 'clickable').append('<p class="covering" id="exit">door</p>');
+    $('#item_2').append('<p class="tool" id="ladle"><img src="images/ladle.png">ladle</p>');
+    $('#item_3').addClass('clickable')
+                .append('<p class="covering" id="exit">door</p>');
 
-    changeCommentary('Getting out of that classroom burned more calories than you thought was possible. \
+    changeCommentary('Getting out of that computer lab burned more calories than you thought was possible. \
         Perhaps grabbing some grub in the cafeteria might power your way through the rest of the school? \
         As you step into the cafeteria, the pungent aroma of soup engulfs your nostrils and fills your head with craving. \
         You dip your finger into the soup and taste it. It has an oddly metallic taste.');
@@ -64,7 +63,7 @@ function clickityClick(currentLayer) {
 };
 
 function getLevel() {
-    return 2;
+    return 3;
 };
 
 function getSolution() {
