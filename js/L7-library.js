@@ -24,7 +24,7 @@ $(document).ready(function() {
             You walk out of the art room into the now familiar hallway. But wait! It’s not a familiar hallway. \
             Oh no no no. The once dull gray walls have changed into a flamboyant and striking orange hue. \
             You smell a faint fragrance of gasoline and take a step back in amazement as, what can only be described as, \
-            a leprechaun jumps in your path wags its finger');
+            a leprechaun jumps in your path wags its finger.');
 
     $('#item_0').css({ //
         top: 50,
@@ -69,7 +69,7 @@ function clickityClick(currentLayer) {
         if (($.inArray('ram', inToolbox)) > -1) {
             levelOver = true;
         } else {
-            changeCommentary('keep looking for a way to break through');
+            changeCommentary('This door is locked!  What a surprise...');
         }
 
     } else {
@@ -102,12 +102,12 @@ function getLevel() {
 }
 
 function getSolution() {
-    var s1 = '1: click the book on the table to reveal a bookmark with a code written on it; ';
-    var s2 = '2: click on the door to the office once you have the code to unlock it. \
+    var s1 = '1: Click the book on the table to reveal a bookmark with a code written on it; ';
+    var s2 = '2: Click on the door to the office once you have the code to unlock it. \
                 this will automatically add a slip of paper in your toolbox like you found in the office;';
-    var s3 = '3: the slip of paper has "try the third bookshelf" written on it, so you check this out; ';
-    var s4 = '4: click on the third bookshelf to obtain the lockbox key; ';
-    var s5 = '5: use the key to unlock the box, revealing a battering ram; ';
-    var s6 = '6: use the battering ram with the locked door to plow through it.';
+    var s3 = '3: The slip of paper has "try the third bookshelf" written on it, so you check this out; ';
+    var s4 = '4: Click on the third bookshelf to obtain the lockbox key; ';
+    var s5 = '5: Use the key to unlock the box, revealing a battering ram; ';
+    var s6 = '6: Use the battering ram with the locked door to plow through it.';
     return s1 + s2 + s3 + s4 + s5 + s6;
 }

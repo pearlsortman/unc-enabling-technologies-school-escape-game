@@ -39,19 +39,19 @@ function clickityClick(currentLayer) {
         if (($.inArray('powercord', inToolbox)) > -1) {
             levelOver = true;
         } else {
-            changeCommentary('seems this computer is missing something important');
+            changeCommentary('It seems this computer is missing something important.');
         }
 
     } else {
         if (currentP.is('#desk')) {
             removeObjectLayer(currentLayer, currentP);
-            changeCommentary('good job, you found the screwdriver');
+            changeCommentary('You found a screwdriver and place it in your toolbox.');
         } else if (currentP.is('#lockbox')) {
             if (($.inArray('screwdriver', inToolbox)) > -1) {
                 removeObjectLayer(currentLayer, currentP);
-                changeCommentary('yay, you broke into the toolbox with the screwdriver');
+                changeCommentary('You break into the toolbox with the screwdriver.');
             } else {
-                changeCommentary('looks like it is locked.. keep looking for a way to break in');
+                changeCommentary('This box is locked!  You need a way to get inside.');
             }
         }
     }
@@ -65,7 +65,7 @@ function getLevel() {
 };
 
 function getSolution() {
-    var step1 = '1: Find screwdriver in teachers desk and add to toolbox; ';
+    var step1 = '1: Find screwdriver in desk and add to toolbox; ';
     var step2 = '2: Click lockbox with screwdriver in toolbox to force open and find powercord';
     var step3 = '3: Click computer with powercord in inventory to unlock door and escape';
     return step1 + step2 + step3;

@@ -59,7 +59,7 @@ function clickityClick(currentLayer) {
         if (($.inArray('hammer', inToolbox)) > -1) {
             levelOver = true;
         } else {
-            changeCommentary('figure out what to use to break the window');
+            changeCommentary('This window is shut.');
         }
 
     } else {
@@ -68,16 +68,16 @@ function clickityClick(currentLayer) {
         if (currentP.is('#desk')) {
             if ((($.inArray('pencil', inToolbox)) > -1) && (($.inArray('paper', inToolbox)) > -1)) {
                 removeObjectLayer(currentLayer, currentP);
-                changeCommentary('somethings happening! watch the rubbing from the desk reveal a secret combination'); 
+                changeCommentary('Something is happening! You watch the rubbing from the desk reveal a secret combination.'); 
             } else {
-                changeCommentary('youre right, looks like theres something on the desk. keep searching for a way to reveal the writing');
+                changeCommentary('It looks like there is something carved into the desk. Keep searching for a way to reveal the writing.');
             }
         } else if (currentP.is('#cabinet')) {
             if (($.inArray('password', inToolbox)) > -1) {
                 removeObjectLayer(currentLayer, currentP)
-                changeCommentary('good job, the password you uncovered on the desk opens this lock');
+                changeCommentary('The password you uncovered on the desk opens this lock.');
             } else {
-                changeCommentary('looks like we need the combination for this lock');
+                changeCommentary('It looks like we need the combination for this lock.');
             }
         }
     }

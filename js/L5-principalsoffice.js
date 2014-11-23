@@ -56,7 +56,7 @@ function clickityClick(currentLayer) {
         if (($.inArray('doorkey', inToolbox)) > -1) {
             levelOver = true;
         } else {
-            changeCommentary('locked up pretty tight here');
+            changeCommentary('This door is locked tightly!');
         }
 
     } else {
@@ -65,9 +65,9 @@ function clickityClick(currentLayer) {
         if (currentP.is('#cabinet')) {
             if (($.inArray('cabinetkey', inToolbox)) > -1) {
                 removeObjectLayer(currentLayer, currentP);
-                changeCommentary('a hammer was hidden in the filing cabinet');
+                changeCommentary('You find a hammer in the filing cabinet');
             } else {
-                changeCommentary('you keep trying to pick the lock but its not working. we will have to find another way in');
+                changeCommentary('You keep trying to pick the lock but its not working. You will have to find another way in.');
             }
         } else {
             var currentImg = currentLayer.children('img:first');
@@ -75,13 +75,13 @@ function clickityClick(currentLayer) {
             if (currentP.is('#plant')) {
                 if(($.inArray('hammer', inToolbox)) > -1) {
                     removeObjectLayerWithImage(currentLayer, currentP, currentImg);
-                    changeCommentary('awesome, you broke the pot and a giant key fell out! wonder what this could go to...');
+                    changeCommentary('You break the pot and a giant key falls out! I wonder what this could go to...');
                 } else {
-                    changeCommentary('this plant looks suspicious, lets find something to smash it with to see whats there');
+                    changeCommentary('This plant looks suspicious, you should find something to smash it to see what is there.');
                 }
             } else if (currentP.is('#couch')) {
                 removeObjectLayer(currentLayer, currentP);
-                changeCommentary('you found a key under the couch');
+                changeCommentary('You find a key under the couch.');
             }
         }
        

@@ -49,7 +49,7 @@ function clickityClick(currentLayer) {
         if (($.inArray('doorkey', inToolbox)) > -1) {
             levelOver = true;
         } else {
-            changeCommentary('you need the key first');
+            changeCommentary('This door is locked!');
         }
 
     } else {
@@ -58,16 +58,16 @@ function clickityClick(currentLayer) {
         if (currentP.is('#equation')) {
             if (($.inArray('mathbook', inToolbox)) > -1) {
                 removeObjectLayerWithImage(currentLayer, currentP, currentImg);
-                changeCommentary('great, you have the knowledge in the math book to solve this equation');
+                changeCommentary('You solve the equation.  The answer seems important.');
             } else {
-                changeCommentary('havent learned to solve this yet');
+                changeCommentary('You have no idea how to solve this.');
             }
         } else if (currentP.is('#safe')) {
             if (($.inArray('answer', inToolbox)) > -1) {
                 removeObjectLayer(currentLayer, currentP);
-                changeCommentary('yay, you cracked the safe!');
+                changeCommentary('You crack the safe using the answer on the board.');
             } else {
-                changeCommentary('solve equation first and add answer to toolbox');
+                changeCommentary('The safe is locked.');
             }
         }
     }
@@ -78,10 +78,10 @@ function getLevel() {
 }
 
 function getSolution() {
-    var step1 = '1: click on the book to reveal saying; ';
-    var step2 = '2: click on blackboard equation to solve automatically, solution moves to toolbox; ';
-    var step3 = '3: click on safe with solution in toolbox; ';
-    var step4 = '4: safe contains key, click on key to move to toolbox; ';
-    var step5 = '5: click on door with key in toolbox';
+    var step1 = '1: Click on the book to reveal saying; ';
+    var step2 = '2: Click on blackboard equation to solve automatically, solution moves to toolbox; ';
+    var step3 = '3: Click on safe with solution in toolbox; ';
+    var step4 = '4: Safe contains key, click on key to move to toolbox; ';
+    var step5 = '5: Click on door with key in toolbox';
     return step1 + step2 + step3 + step4 + step5;
 }
