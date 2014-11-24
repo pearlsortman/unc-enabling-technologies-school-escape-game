@@ -24,11 +24,11 @@ h2 {
 
 img {
     max-width: 100%;
+    max-height: 100%;
 }
 
 .clickable p {
-/*    visibility: hidden;*/
-    font-size: 1em;
+    font-size: 0em;
     color: black;
 }
 
@@ -115,24 +115,17 @@ td {
 
 .clickable {
     margin: 0;
-    background-color: yellow;
-    border-radius: 10px;
-    opacity: 0.5;
+    border-radius: 30px;
     width: 150px;
     height: 150px;
     position: absolute;
-}
-
-.clickable img {
-    opacity: 1.0;
 }
 
 .hidden {
     visibility: hidden;
 }
 
-.entered, :focus {
-    background-color:rgba(255,0,0,0.1);
-    outline: none;
+.entered {
+    background-color:rgba(255,0,0,0.2);
     color: blue;
 }

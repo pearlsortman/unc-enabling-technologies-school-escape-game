@@ -9,7 +9,7 @@ $(document).ready(function() {
     $('#item_1').append('<p class="dummy" id="lunchtray">lunch tray</p>');
     $('#item_2').append('<p class="tool" id="ladle"><img src="images/ladle.png">ladle</p>');
     $('#item_3').addClass('clickable')
-                .append('<p class="covering" id="exit">door</p>');
+                .append('<p id="exit">door</p>');
 
     changeCommentary('Getting out of that computer lab burned more calories than you thought was possible. \
         Perhaps grabbing some grub in the cafeteria might power your way through the rest of the school? \
@@ -49,11 +49,12 @@ function clickityClick(currentLayer) {
         }
 
     } else {
-        var currentImg = currentP.children('img:first');
-
+/*        var currentImg = currentP.children('img:first');
+*/
         if (currentP.is('#souppot')) {
             if (($.inArray('ladle', inToolbox)) > -1) {
-                removeObjectLayerWithImage(currentLayer, currentP, currentImg);
+                /*removeObjectLayerWithImage(currentLayer, currentP, currentImg);*/
+                removeObjectLayer(currentLayer, currentP);
                 changeCommentary('You found the key.');
             } else {
                 changeCommentary('The soup is too hot! You need something to scoop it out.');

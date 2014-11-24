@@ -1,3 +1,5 @@
+var ropeAttached = false;
+
 $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
@@ -68,9 +70,9 @@ $(document).ready(function() {
 
 function clickityClick(currentLayer) {
     var currentP = currentLayer.children('p:first');
-    var ropeAttached = false;
 
     if (currentP.is('#ceiling')) { //EXIT
+        alert(ropeAttached);
         if (ropeAttached) {
             levelOver = true;
         } else {

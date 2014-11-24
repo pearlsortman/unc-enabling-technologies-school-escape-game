@@ -6,8 +6,8 @@ $(document).ready(function() {
 
     $('#item_0').append('<p class="covering" id="fishbowl">fishbowl</p>\
                         <p class="hidden tool" id="doorkey">doorkey<img src="images/doorkey.png"></p>');
-    $('#item_1').append('<p class="dummy" id="desk">desk</p>');
-    $('#item_2').append('<p class="covering" id="exit">door</p>');
+    $('#item_1').append('<p class="dummy">desk</p>');
+    $('#item_2').append('<p id="exit">door</p>');
 
     changeCommentary('Oh no! You’ve fallen asleep in class again! \
             And no one woke you up for recess! You need to get out to the playground as soon as possible to enjoy the last precious, \
