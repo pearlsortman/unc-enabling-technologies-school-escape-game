@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('.clickable').on('mouseenter mouseleave', function() {
         $(this).toggleClass('entered');
     });
-    
+
     // allows keyboard accessibility with multiple key options (2-switch accessible)
     $(document).keydown(function(e) {
 
@@ -107,18 +107,18 @@ function isLevelOver() {
         var nextLevel = getLevel() + 1;
         var nextLevelLink = 'L' + nextLevel + '.php';
         if (nextLevel < 9) {
-            if (nextLevel==4) {
-                window.location.replace('easyComplete.html');
-            } else if (nextLevel==7) {
-                window.location.replace('mediumComplete.html');
-            } else {
-                $('#text').css('font-size', '2.75em');
-                changeCommentary('Congratulations! You made it to level ' + nextLevel);
-                setTimeout(function() {
+            setTimeout(function() {
+                if (nextLevel == 4) {
+                    window.location.replace('easyComplete.html');
+                } else if (nextLevel == 7) {
+                    window.location.replace('mediumComplete.html');
+                } else {
+                    $('#text').css('font-size', '2.75em');
+                    changeCommentary('Congratulations! You made it to level ' + nextLevel);
                     window.location.replace(nextLevelLink);
-                }, 5000);    
-            }
-            
+                }
+            }, 3000);
+
         } else {
             window.location.replace('hardComplete.html');
             /*changeCommentary('Wow, great job! You made through all the levels! Enjoy the outside world again.');*/

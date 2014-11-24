@@ -1,27 +1,24 @@
 html, body {
-    margin: 0;
+    font-family: 'Bangers', cursive;
+    background-image: url(http://www.transparenttextures.com/patterns/padded.png);
+    background-color: #060F12; //dark blue
+    margin: auto;
     padding: 0;
     text-align: center;
-    color: #ffffff;
-    font-family: 'Rajdhani', sans-serif;
-    background-color: #00030f;
-    background-image: url(http://www.transparenttextures.com/patterns/padded.png);
-    vertical-align: top;
+    vertical-align: middle;
 }
 
-h1, h2 {
-    font-family: 'Bangers', cursive;
-    padding: 0;
-    margin: 0;
-    font-size: 3em;
+h1 {
+	font-size: 8em;
+	color: #E1E3D8; //light grey almost white
 }
 
 h2 {
-    font-size: 2em;
-    color:  gray;
+	font-size: 3em;
+	color: #FCAE0C; // yellow
 }
 
-div, video {
+video {
     vertical-align: top;
     object-fit: fill;
 }

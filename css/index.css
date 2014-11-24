@@ -1,29 +1,35 @@
-body {
+html, body {
+	font-family: 'Bangers', cursive;
+	background-image: url(http://www.transparenttextures.com/patterns/padded.png);
+	background-color: #060F12; //dark blue
 	margin: auto;
 	padding: 0;
 	text-align: center;
-	font-family: 'Bangers', cursive;
-	color: white;
-	background-color: #00030f;
-	background-image: url(http://www.transparenttextures.com/patterns/padded.png);
+	vertical-align: middle;
 }
 
 h1 {
-	font-size: 8em;
+	color: #F5EAB9; // white
 	margin-top: 70px;
 	margin-bottom: 30px;
+	font-size: 8em;
 }
+
+h2, h3 {
+	color: #FCB611; // light orange
+}
+
 h2 {
-	font-size: 3em;
-	margin-top: 10px;
 	padding-top: 0;
-	color: gray;
+	margin-top: 10px;
 	margin-bottom: 40px;
+	font-size: 3em;
 }
+
 h3 {
 	font-size: 5em;
-	position: relative;
 }
+
 div {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -38,17 +44,17 @@ div {
 }
 
 .clickable {
+	background-color: #76DBBF; // cyan
 	display: inline-block;
 	width: 300px;
 	height: 250px;
 	text-align: center;
 	padding: 0;
 	border-radius: 40px;
-	border: 15px solid white;
+	border: 15px solid #F5EAB9; // white
 	margin: 15px;
-	background-color: #000033;
 }
 
-.entered, .clickable:hover {
-	color: red;
+.entered h3, .clickable:hover {	
+	color: #FC3714; // bright orange
 }

@@ -1,34 +1,39 @@
 html, body {
-    margin: 0;
+    font-family: 'Bangers', cursive;
+    background-image: url(http://www.transparenttextures.com/patterns/padded.png);
+    background-color: #060F12; //dark blue
+    margin: auto;
     padding: 0;
     text-align: center;
-    color: #ffffff;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    background-color: #00030f;
-    background-image: url(http://www.transparenttextures.com/patterns/padded.png);
-    vertical-align: center;
+    vertical-align: middle;
 }
 
 h1, h2 {
-    font-family: 'Bangers', cursive;
     padding: 0;
     margin: 0;
 }
 h1 {
     font-size: 3em;
+    color: #E1E3D8; //light grey almost white
 }
 h2 {
     font-size: 2em;
+    color: #FCAE0C; // yellow
+}
+p {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
 }
 #text {
     font-size: 0.75em;
+    color: #76DBBF; //light blue
 }
 
 .clickable p {
     width: 150px;
     height: 150px;
 }
+
 img {
     max-width: 100%;
     max-height: 100%;
@@ -45,10 +50,6 @@ div {
     width: 150px;
     height: 150px;
     position: absolute;
-}
-
-.hidden {
-    visibility: hidden;
 }
 .entered {
     background-color:rgba(255,0,0,0.2);
@@ -93,18 +94,20 @@ div {
     width: 100%;
 }
 
+#solution, #commentary, #toolbox {
+    background-color: #F12A1B; //red
+}
+
 #solution {
     margin-right: 10px;
     margin-top: 10px;
     width: 290px;
     position: relative;
-    background-color: red;
     border-radius: 0px;
     opacity: 1.0;
     height: 100px;
 }
 #commentary {
-    background: red;
     height: 100px;
     margin-top: 10px;
     width: 800px;
@@ -112,7 +115,6 @@ div {
 
 #toolbox {
     background-image: url(http://www.transparenttextures.com/patterns/padded.png);
-    background-color: red;
     width: 290px;
 }
 #toolbox table {
@@ -120,11 +122,19 @@ div {
     width: 100%;
 }
 td {
-    border: solid thick white;
+    border: solid thick #E1E3D8; //light grey almost white
     height: 157px;
     width: 140px;
 }
 td img {
     max-width: 90%;
     max-height: 90%;
+}
+
+.entered, .clickable:hover {
+    background-color: green;
+}
+
+.hidden {
+    visibility: hidden;
 }
