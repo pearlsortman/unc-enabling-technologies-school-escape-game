@@ -5,17 +5,17 @@ $(document).ready(function() {
     $('#background').attr('src', 'images/backgrounds/L7.jpg');
 
     // activate items to be used by adding tab order and contents
-    $('#item_0').append('<p class="dummy" id="bookshelf1">bookshelf1</p>');
-    $('#item_1').append('<p class="dummy" id="bookshelf2">bookshelf2</p>');
-    $('#item_2').append('<p class="covering" id="bookshelf3">bookshelf3</p> <p class="hidden tool" id="boxkey">boxkey<img src="images/smallkey.png"></p>');
+    $('#item_0').append('<p class="dummy">bookshelf</p>');
+    $('#item_1').append('<p class="dummy">bookshelf</p>');
+    $('#item_2').append('<p class="covering" id="bookshelf3">bookshelf</p> <p class="hidden tool" id="boxkey">box key<img src="images/smallkey.png"></p>');
     $('#item_3').addClass('clickable')
                 .append('<p class="covering" id="officedoor">door</p><p class="hidden tool" id="hint">hint<img src="images/paperslip.png"</p>');
     $('#item_4').addClass('clickable')
                 .append('<p class="covering" id="book">book<img src="images/closedbook.png"</p> <p class="hidden tool" id="bookmark">bookmark<img src="images/openbook.png"></p>');
     $('#item_5').addClass('clickable')
-                .append('<p class="dummy" id="computer">computer</p>');
+                .append('<p class="dummy">computer</p>');
     $('#item_6').addClass('clickable')
-                .append('<p class="covering" id="lockbox">lockbox</p> <p class="hidden tool" id="ram">ram<img src="images/ram.png></p>');
+                .append('<p class="covering" id="lockbox">lockbox</p> <p class="hidden tool" id="ram">ram<img src="images/ram.png"></p>');
     $('#item_7').addClass('clickable')
                 .append('<p id="exit">door</p>');
 
@@ -77,7 +77,6 @@ function clickityClick(currentLayer) {
         }
 
     } else {
-        var currentImg = currentLayer.children('img:first');
 
         if (currentP.is('#bookshelf3')) {
             if (($.inArray('hint', inToolbox)) > -1) {
@@ -97,7 +96,7 @@ function clickityClick(currentLayer) {
             removeObjectLayer(currentLayer, currentP);
             changeCommentary('Great job! You found a bookmark in the book with a password scribbled on it.');
         } else if (currentP.is('#lockbox')) {
-            if(($.inArray('boxkey', inToolbox)) > -1) {
+            if(($.inArray('box key', inToolbox)) > -1) {
                 removeObjectLayer(currentLayer, currentP);
                 changeCommentary('The key you found on the bookshelf unlocked this box.');
             } else {

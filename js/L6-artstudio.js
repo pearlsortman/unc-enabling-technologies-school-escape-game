@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     //activate items to be used by adding tab order and contents
     $('#item_0').append('<p class="tool" id="pencil">pencil<img src="images/pencil.png"></p>');
-    $('#item_1').append('<p class="dummy" id="paintbrush">paintbrush<img src="paintbrush.png"></p>');
+    $('#item_1').append('<p class="dummy">paintbrush<img src="images/paintbrush.png"></p>');
     $('#item_2').append('<p class="covering" id="desk">desk</p><p class="hidden tool" id="password">password<img src="images/password.png"></p>');
     $('#item_3').addClass('clickable')
                 .append('<p class="tool" id="paper">paper<img src="images/papertray.png"></p>');
@@ -63,7 +63,6 @@ function clickityClick(currentLayer) {
         }
 
     } else {
-        var currentImg = currentLayer.children('img:first');
 
         if (currentP.is('#desk')) {
             if ((($.inArray('pencil', inToolbox)) > -1) && (($.inArray('paper', inToolbox)) > -1)) {

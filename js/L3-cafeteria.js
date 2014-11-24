@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     $('#item_0').append('<p class="covering" id="souppot">pot of soup<img src="images/souppot.png"></p>\
                         <p class="hidden tool" id="doorkey">doorkey<img src="images/doorkey.png"></p>');
-    $('#item_1').append('<p class="dummy" id="lunchtray">lunch tray</p>');
+    $('#item_1').append('<p class="dummy">lunch tray</p>');
     $('#item_2').append('<p class="tool" id="ladle"><img src="images/ladle.png">ladle</p>');
     $('#item_3').addClass('clickable')
                 .append('<p id="exit">door</p>');
@@ -49,11 +49,8 @@ function clickityClick(currentLayer) {
         }
 
     } else {
-/*        var currentImg = currentP.children('img:first');
-*/
         if (currentP.is('#souppot')) {
             if (($.inArray('ladle', inToolbox)) > -1) {
-                /*removeObjectLayerWithImage(currentLayer, currentP, currentImg);*/
                 removeObjectLayer(currentLayer, currentP);
                 changeCommentary('You found the key.');
             } else {

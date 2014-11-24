@@ -5,7 +5,7 @@ $(document).ready(function() {
     $('#background').attr('src', 'images/backgrounds/L1.jpg');
 
     $('#item_0').append('<p class="covering" id="fishbowl">fishbowl</p>\
-                        <p class="hidden tool" id="doorkey">doorkey<img src="images/doorkey.png"></p>');
+                        <p class="hidden tool" id="doorkey">door key<img src="images/doorkey.png"></p>');
     $('#item_1').append('<p class="dummy">desk</p>');
     $('#item_2').append('<p id="exit">door</p>');
 
@@ -36,12 +36,11 @@ function clickityClick(currentLayer) {
     var currentP = currentLayer.children('p:first');
     
     if (currentP.is('#exit')) {
-        if (($.inArray('doorkey', inToolbox)) > -1) {
+        if (($.inArray('door key', inToolbox)) > -1) {
             levelOver = true;
         } else {
             changeCommentary('Sorry, you need the key first');
         }
-
     } else {
         if (currentP.is('#fishbowl')) {
             removeObjectLayer(currentLayer, currentP);

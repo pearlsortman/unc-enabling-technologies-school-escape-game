@@ -8,7 +8,7 @@ $(document).ready(function() {
     
     //activate items to be used by adding tab order and contents
     $('#item_0').append('<p class="dummy">basketballs</p>');
-    $('#item_1').append('<p class="covering" id="ballmachine">ballmachine</p><p class="hidden tool" id="coiledrope">coiledrope<img src="images/coiledrope.png"></p>');
+    $('#item_1').append('<p class="covering" id="ballmachine">ballmachine</p><p class="hidden tool" id="coiledrope">coiled rope<img src="images/coiledrope.png"></p>');
     $('#item_2').append('<p class="dummy">weights</p>');
     $('#item_3').addClass('clickable')
                 .append('<p class="dummy">basketball hoop</p>');
@@ -17,13 +17,16 @@ $(document).ready(function() {
     $('#item_5').addClass('clickable')
                 .append('<p class="dummy">bleachers</p>');
     $('#item_6').addClass('clickable')
-                .append('<p class="tool" id="tennisballs">tennisballs<img src="images/tennisballs.png"></p>');
+                .append('<p class="tool" id="tennisballs">tennis balls<img src="images/tennisballs.png"></p>');
     $('#item_7').addClass('clickable')
                 .append('<p class="covering" id="paper">paper<img src="images/paperslip.png"></p><p class="hidden tool" id="password">password<img src="images/password.png"></p>');
     $('#item_8').addClass('clickable')
                 .append('<p id="ceiling">ceiling</p>');
 
-    changeCommentary('L8: initial room blurb');
+    changeCommentary('You step through the ruined library doors and find yourself oddly in the school gymnasium. You \
+        take a moment to contemplate the bizarre fact that the school library is connected directly to the \
+        school gym. Because of your past experiences, you do not even hesitate to check whether the \
+        gym exit is locked and delve directly into the task of finding items that will help with your escape.');
 
     $('#item_0').css({ // basketballs
         top: 200,
@@ -44,8 +47,9 @@ $(document).ready(function() {
         height: 100
     });
     $('#item_4').css({ // hook
-        top: 50,
-        left: 150
+        top: 75,
+        left: 125,
+        height: 250
     });
     $('#item_5').css({ // bleachers
         top: 175,
@@ -72,7 +76,6 @@ function clickityClick(currentLayer) {
     var currentP = currentLayer.children('p:first');
 
     if (currentP.is('#ceiling')) { //EXIT
-        alert(ropeAttached);
         if (ropeAttached) {
             levelOver = true;
         } else {
@@ -81,7 +84,7 @@ function clickityClick(currentLayer) {
     } else {
 
         if (currentP.is('#ballmachine')) {
-            if ( (($.inArray('tennisballs', inToolbox)) > -1) && (($.inArray('password', inToolbox)) > -1) ) {
+            if ( (($.inArray('tennis balls', inToolbox)) > -1) && (($.inArray('password', inToolbox)) > -1) ) {
                 removeObjectLayer(currentLayer, currentP);
                 changeCommentary('When you use the password to unlock the ball machine and insert the tennis ball stash, it spits out a rope instead!');
             } else {
@@ -91,7 +94,7 @@ function clickityClick(currentLayer) {
             removeObjectLayer(currentLayer, currentP);
             changeCommentary('You found a password on this piece of paper. Make sure to add it to the toolbox.');
         } else if (currentP.is('#hook')) {
-            if (($.inArray('coiledrope', inToolbox)) > -1) {
+            if (($.inArray('coiled rope', inToolbox)) > -1) {
                 ropeAttached = true;
                 removeObjectLayer(currentLayer, currentP);
                 changeCommentary('Awesome, you attached the rope from the ball machine to the hook. You climb up the rope to get closer to an exit.');

@@ -5,14 +5,14 @@ $(document).ready(function() {
     $('#background').attr('src', 'images/backgrounds/L5.jpg');
 
     //activate items to be used by adding tab order and contents
-    $('#item_0').append('<p class="dummy" id="desk">desk</p>');
+    $('#item_0').append('<p class="dummy">desk</p>');
     $('#item_1').append('<p class="covering" id="cabinet">cabinet</p>\
                         <p class="hidden tool" id="hammer">hammer<img src="images/hammer.png"></p>');
     $('#item_2').append('<p class="covering" id="couch">couch</p>\
-                        <p class="hidden tool" id="cabinetkey">cabinetkey<img src="images/smallkey.png"></p>');
+                        <p class="hidden tool" id="cabinetkey">cabinet key<img src="images/smallkey.png"></p>');
     $('#item_3').addClass('clickable')
                 .append('<p class="covering" id="plant">plant<img src="images/plant.png"></p>\
-                        <p class="hidden tool" id="doorkey">doorkey<img src="images/doorkey.png"></p>');
+                        <p class="hidden tool" id="doorkey">door key<img src="images/doorkey.png"></p>');
     $('#item_4').addClass('clickable')
                 .append('<p id="exit">door</p>');
 
@@ -53,28 +53,26 @@ function clickityClick(currentLayer) {
     var currentP = currentLayer.children('p:first');
 
     if (currentP.is('#exit')) { //EXIT
-        if (($.inArray('doorkey', inToolbox)) > -1) {
+        if (($.inArray('door key', inToolbox)) > -1) {
             levelOver = true;
         } else {
             changeCommentary('This door is locked tightly!');
         }
 
     } else {
-        var currentImg = currentLayer.children('img:first');
 
         if (currentP.is('#cabinet')) {
-            if (($.inArray('cabinetkey', inToolbox)) > -1) {
+            if (($.inArray('cabinet key', inToolbox)) > -1) {
                 removeObjectLayer(currentLayer, currentP);
                 changeCommentary('You find a hammer in the filing cabinet');
             } else {
                 changeCommentary('You keep trying to pick the lock but its not working. You will have to find another way in.');
             }
         } else {
-            var currentImg = currentLayer.children('img:first');
 
             if (currentP.is('#plant')) {
                 if(($.inArray('hammer', inToolbox)) > -1) {
-                    removeObjectLayerWithImage(currentLayer, currentP, currentImg);
+                    removeObjectLayer(currentLayer, currentP);
                     changeCommentary('You break the pot and a giant key falls out! I wonder what this could go to...');
                 } else {
                     changeCommentary('This plant looks suspicious, you should find something to smash it to see what is there.');

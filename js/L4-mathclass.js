@@ -6,8 +6,8 @@ $(document).ready(function() {
 
     $('#item_0').append('<p class="covering" id="equation">equation<img src="images/equation.png"></p>\
                         <p class="hidden tool" id="answer">answer<img src="images/answer.png"></p>');
-    $('#item_1').append('<p class="dummy" id="poster">math poster</p>');
-    $('#item_2').append('<p class="tool" id="mathbook">mathbook<img src="images/closedbook.png"></p>');
+    $('#item_1').append('<p class="dummy">math poster</p>');
+    $('#item_2').append('<p class="tool" id="mathbook">math book<img src="images/closedbook.png"></p>');
     $('#item_3').addClass('clickable')
                 .append('<p class="covering" id="safe">safe</p><p class="hidden tool" id="doorkey">doorkey<img src="images/doorkey.png"></p>');
     $('#item_4').addClass('clickable')
@@ -53,11 +53,10 @@ function clickityClick(currentLayer) {
         }
 
     } else {
-        var currentImg = currentLayer.children('img:first');
 
         if (currentP.is('#equation')) {
-            if (($.inArray('mathbook', inToolbox)) > -1) {
-                removeObjectLayerWithImage(currentLayer, currentP, currentImg);
+            if (($.inArray('math book', inToolbox)) > -1) {
+                removeObjectLayer(currentLayer, currentP);
                 changeCommentary('You solve the equation.  The answer seems important.');
             } else {
                 changeCommentary('You have no idea how to solve this.');

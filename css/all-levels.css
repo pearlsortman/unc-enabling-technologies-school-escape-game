@@ -4,8 +4,10 @@ html, body {
     text-align: center;
     color: #ffffff;
     font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
     background-color: #00030f;
     background-image: url(http://www.transparenttextures.com/patterns/padded.png);
+    vertical-align: center;
 }
 
 h1, h2 {
@@ -13,27 +15,23 @@ h1, h2 {
     padding: 0;
     margin: 0;
 }
-
 h1 {
     font-size: 3em;
 }
-
 h2 {
     font-size: 2em;
 }
-
-img {
-    max-width: 100%;
-    max-height: 100%;
+#text {
+    font-size: 0.75em;
 }
 
 .clickable p {
-    font-size: 0em;
-    color: black;
+    width: 150px;
+    height: 150px;
 }
-
-p {
-    font-weight: 700;
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 div {
@@ -41,11 +39,27 @@ div {
     margin: 0px;
     width: 100%;
 }
-
-img {
-    width: 100%;
+.clickable {
+    margin: 0;
+    border-radius: 30px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
 }
 
+.hidden {
+    visibility: hidden;
+}
+.entered {
+    background-color:rgba(255,0,0,0.2);
+    color: blue;
+}
+
+.clickable p {
+    font-size: 0em;
+    color: black;
+    max-width: 100%;
+}
 .primaryDiv {
     display: block;
     width: 1100px;
@@ -73,6 +87,12 @@ img {
     width: 800px;
     position: relative;
 }
+#background {
+    display: block;
+    height: 525px;
+    width: 100%;
+}
+
 #solution {
     margin-right: 10px;
     margin-top: 10px;
@@ -83,17 +103,13 @@ img {
     opacity: 1.0;
     height: 100px;
 }
-#background {
-    display: block;
-    height: 525px;
-    width: 100%;
-}
 #commentary {
     background: red;
     height: 100px;
     margin-top: 10px;
     width: 800px;
 }
+
 #toolbox {
     background-image: url(http://www.transparenttextures.com/patterns/padded.png);
     background-color: red;
@@ -103,29 +119,12 @@ img {
     border-collapse: collapse;
     width: 100%;
 }
-
 td {
     border: solid thick white;
     height: 157px;
     width: 140px;
 }
-#text {
-    font-size: .75em;
-}
-
-.clickable {
-    margin: 0;
-    border-radius: 30px;
-    width: 150px;
-    height: 150px;
-    position: absolute;
-}
-
-.hidden {
-    visibility: hidden;
-}
-
-.entered {
-    background-color:rgba(255,0,0,0.2);
-    color: blue;
+td img {
+    max-width: 90%;
+    max-height: 90%;
 }
