@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
 <meta charset='utf-8'>
-<title>SE: L1 DEMO</title>
+<title>School Escape: Demo</title>
 
 <head>
-    <script type="text/javascript" src="L1.js"></script>
-    <script type="text/javascript" src="demo-L1.js"></script>
-	<?php include 'all-levels-css-js.html'; ?>
+    <link type="text/css" rel="stylesheet" href="css/demo.css"></link>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Bangers' rel='stylesheet' type='text/css'></link>
 </head>
 
 <body>
-    <?php include 'all-levels.html'; ?>
+    <div class="header">
+        <h1>School Escape</h1>
+        <h2>The Demo</h2>
+    </div>
+    <div class="video">
+        <video width="1100" height="650" autoplay>
+            <source src="small.mp4" type="video/mp4">
+        </video>
+    </div>
 </body>
+
+<!-- Script automatically returns to the home screen after 1.5 minutes -->
+<script>
+	setTimeout(function() {
+    	window.location.replace('index.html');
+	}, 4000);
+</script>
 
 </html>

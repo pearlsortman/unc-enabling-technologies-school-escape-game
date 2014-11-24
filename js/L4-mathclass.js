@@ -2,9 +2,9 @@ $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 4: The Math Classroom');
-    $('#background').attr('src', 'images/L4.jpg');
+    $('#background').attr('src', 'images/backgrounds/L4.jpg');
 
-    $('#item_0').append('<p class="covering" id="equation">equation<img src"images/equation.png"></p>\
+    $('#item_0').append('<p class="covering" id="equation">equation<img src="images/equation.png"></p>\
                         <p class="hidden tool" id="answer">answer<img src="images/answer.png"></p>');
     $('#item_1').append('<p class="dummy" id="poster">math poster</p>');
     $('#item_2').append('<p class="tool" id="mathbook">mathbook<img src="images/closedbook.png"></p>');
@@ -78,10 +78,10 @@ function getLevel() {
 }
 
 function getSolution() {
-    var step1 = '1: Click on the book to reveal saying; ';
-    var step2 = '2: Click on blackboard equation to solve automatically, solution moves to toolbox; ';
-    var step3 = '3: Click on safe with solution in toolbox; ';
-    var step4 = '4: Safe contains key, click on key to move to toolbox; ';
-    var step5 = '5: Click on door with key in toolbox';
-    return step1 + step2 + step3 + step4 + step5;
+    var s1 = '1-Click on the book to reveal saying. ';
+    var s2 = '2-Click on blackboard equation to solve automatically, solution moves to toolbox. ';
+    var s3 = '3-Click on safe with solution in toolbox. ';
+    var s4 = '4-Safe contains key, click on key to move to toolbox. ';
+    var s5 = '5-Click on door with key in toolbox.';
+    return s1 + s2 + s3 + s4 + s5;
 }

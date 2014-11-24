@@ -22,6 +22,10 @@ h2 {
     font-size: 2em;
 }
 
+img {
+    max-width: 100%;
+}
+
 .clickable p {
 /*    visibility: hidden;*/
     font-size: 1em;

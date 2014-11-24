@@ -35,6 +35,7 @@ $(document).ready(function() {
         var currentP = $(this).children('p:first');
 
         if (currentLayer.is('#solution')) {
+            $('#text').css('font-size', '1em');
             changeCommentary(getSolution());
 
         } else if (currentP.hasClass('dummy')) {
@@ -106,6 +107,7 @@ function isLevelOver() {
         var nextLevel = getLevel() + 1;
         var nextLevelLink = 'L' + nextLevel + '.php';
         if (nextLevel < 9) {
+            $('#text').css('font-size', '2.75em');
             changeCommentary('Congratulations! You made it to level ' + nextLevel);
             setTimeout(function() {
                 window.location.replace(nextLevelLink);

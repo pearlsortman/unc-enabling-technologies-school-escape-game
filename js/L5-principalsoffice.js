@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 5: Principals Office');
-    $('#background').attr('src', 'images/L5.jpg');
+    $('#background').attr('src', 'images/backgrounds/L5.jpg');
 
     //activate items to be used by adding tab order and contents
     $('#item_0').append('<p class="dummy" id="desk">desk</p>');
@@ -93,9 +93,9 @@ function getLevel() {
 };
 
 function getSolution() {
-    var s1 = '1: Find the filing cabinet key hidden under the couch; ';
-    var s2 = '2: With the key, find the hammer in the cabinet; ';
-    var s3 = '3: Use the hammer to break one of the potted plants, revealing the door key; ';
-    var s4 = '4: Once you found the key under the plant, reach the door to escape.';
+    var s1 = '1-Find the filing cabinet key hidden under the couch. ';
+    var s2 = '2-With the key, find the hammer in the cabinet. ';
+    var s3 = '3-Use the hammer to break one of the potted plants, revealing the door key. ';
+    var s4 = '4-Once you found the key under the plant, reach the door to escape.';
     return s1 + s2 + s3 + s4;
 };

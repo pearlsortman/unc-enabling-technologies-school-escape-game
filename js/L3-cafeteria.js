@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 3: The Cafeteria');
-    $('#background').attr('src', 'images/L3.jpg');
+    $('#background').attr('src', 'images/backgrounds/L3.jpg');
 
     $('#item_0').append('<p class="covering" id="souppot">pot of soup<img src="images/souppot.png"></p>\
                         <p class="hidden tool" id="doorkey">doorkey<img src="images/doorkey.png"></p>');
@@ -67,8 +67,8 @@ function getLevel() {
 };
 
 function getSolution() {
-    var s1 = '1: Click on the ladle to add it to toolbox; ';
-    var s2 = '2: Click on the pot of soup with ladle in the toolbox to fish out the key; ';
-    var s3 = '3: Click on the door with the key in toolbox';
+    var s1 = '1-Click on the ladle to add it to toolbox. ';
+    var s2 = '2-Click on the pot of soup with ladle in the toolbox to fish out the key. ';
+    var s3 = '3-Click on the door with the key in toolbox.';
     return s1 + s2 + s3;
 };

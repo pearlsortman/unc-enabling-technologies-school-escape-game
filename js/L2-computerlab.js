@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 2: The Computer Lab');
-    $('#background').attr('src', 'images/L2.jpg');
+    $('#background').attr('src', 'images/backgrounds/L2.jpg');
 
     $('#item_0').append('<p class="covering" id="lockbox">lockbox</p>\
         <p class="hidden tool" id="powercord">powercord<img src="images/powercord.png"></p>');
@@ -65,8 +65,8 @@ function getLevel() {
 };
 
 function getSolution() {
-    var step1 = '1: Find screwdriver in desk and add to toolbox; ';
-    var step2 = '2: Click lockbox with screwdriver in toolbox to force open and find powercord';
-    var step3 = '3: Click computer with powercord in inventory to unlock door and escape';
+    var step1 = '1-Find screwdriver in desk and add to toolbox. ';
+    var step2 = '2-Click lockbox with screwdriver in toolbox to force open and find powercord. ';
+    var step3 = '3-Click computer with powercord in inventory to unlock door and escape.';
     return step1 + step2 + step3;
 };

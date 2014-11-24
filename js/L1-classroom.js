@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 1: The Classroom');
-    $('#background').attr('src', 'images/L1.jpg');
+    $('#background').attr('src', 'images/backgrounds/L1.jpg');
 
     $('#item_0').append('<p class="covering" id="fishbowl">fishbowl</p>\
                         <p class="hidden tool" id="doorkey">doorkey<img src="images/doorkey.png"></p>');
@@ -55,8 +55,8 @@ function getLevel() {
 };
 
 function getSolution() {
-    var s1 = '1: Find key in fishbowl.; ';
-    var s2 = '2: Add key to toolbox.; ';
-    var s3 = '3: Open the door with key in toolbox.';
+    var s1 = '1-Find key in fishbowl. ';
+    var s2 = '2-Add key to toolbox. ';
+    var s3 = '3-Open the door with key in toolbox.';
     return s1 + s2 + s3;
 };

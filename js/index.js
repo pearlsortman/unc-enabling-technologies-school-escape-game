@@ -24,7 +24,7 @@ $(document).ready(function() {
 
     $('.clickable').click(function() {
         if (this.id=='demo') {
-        	window.location.replace('demo.php');
+        	window.location.replace('demo.html');
         } else if (this.id=='play') {
         	window.location.replace('L1.php');
         } else if (this.id=='level') {
@@ -45,7 +45,9 @@ $(document).ready(function() {
             window.location.replace('L7.php');
         } else if (this.id=='L8') {
             window.location.replace('L8.php');
-        } 
+        } else if (this.id=='home') {
+            window.location.replace('index.html');
+        }
     });
 
 });

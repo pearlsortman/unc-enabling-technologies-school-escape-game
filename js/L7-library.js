@@ -2,20 +2,20 @@ $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 7: Library');
-    $('#background').attr('src', 'images/L7.jpg');
+    $('#background').attr('src', 'images/backgrounds/L7.jpg');
 
     // activate items to be used by adding tab order and contents
-    $('#item_0').append('<p class="dummy" id="bookshelf1">bookshelf</p>');
-    $('#item_1').append('<p class="dummy" id="bookshelf2">bookshelf</p>');
-    $('#item_2').append('<p class="covering" id="bookshelf3">bookshelf</p> <p class="hidden tool" id="boxkey">boxkey<img src="images/smallkey.png"></p>');
+    $('#item_0').append('<p class="dummy" id="bookshelf1">bookshelf1</p>');
+    $('#item_1').append('<p class="dummy" id="bookshelf2">bookshelf2</p>');
+    $('#item_2').append('<p class="covering" id="bookshelf3">bookshelf3</p> <p class="hidden tool" id="boxkey">boxkey<img src="images/smallkey.png"></p>');
     $('#item_3').addClass('clickable')
-                .append('<p class="covering" id="officedoor">door</p><p class="hidden tool" id="paper">paper<img src="images/paperslip.png"</p>');
+                .append('<p class="covering" id="officedoor">door</p><p class="hidden tool" id="hint">hint<img src="images/paperslip.png"</p>');
     $('#item_4').addClass('clickable')
                 .append('<p class="covering" id="book">book<img src="images/closedbook.png"</p> <p class="hidden tool" id="bookmark">bookmark<img src="images/openbook.png"></p>');
     $('#item_5').addClass('clickable')
-                .append('<p class="dummy" id="window">window</p>');
+                .append('<p class="dummy" id="computer">computer</p>');
     $('#item_6').addClass('clickable')
-                .append('<p class="covering" id="lockbox">lockbox</p> <p class="hidden tool" id="ram">battering ram<img src="images/ram.png></p>');
+                .append('<p class="covering" id="lockbox">lockbox</p> <p class="hidden tool" id="ram">ram<img src="images/ram.png></p>');
     $('#item_7').addClass('clickable')
                 .append('<p id="exit">door</p>');
 
@@ -26,37 +26,41 @@ $(document).ready(function() {
             You smell a faint fragrance of gasoline and take a step back in amazement as, what can only be described as, \
             a leprechaun jumps in your path wags its finger.');
 
-    $('#item_0').css({ //
-        top: 50,
-        left: 50
+    $('#item_0').css({ // bookshelf 1
+        top: 125,
+        left: 100
     });
-    $('#item_1').css({
-        top: 100,
+    $('#item_1').css({ // bookshelf 2
+        top: 0,
+        left: 250
+    });
+    $('#item_2').css({ // bookshelf 3 & small key
+        top: 0,
+        left: 410,
+        height: 275,
+        width: 225
+    });
+    $('#item_3').css({ // office door & paper slip
+        top: 25,
+        left: 650
+    });
+    $('#item_4').css({ // book & bookmark
+        top: 325,
+        left: 550
+    });
+    $('#item_5').css({ // computer
+        top: 375,
         left: 200
     });
-    $('#item_2').css({
-        top: 300,
-        left: 350
+    $('#item_6').css({ // lockbox & battering ram
+        top: 155,
+        left: 255
     });
-    $('#item_3').css({
-        top: 300,
-        left: 550
-    });
-    $('#item_4').css({
-        top: 75,
-        left: 500
-    });
-    $('#item_5').css({
-        top: 400,
-        left: 350
-    });
-    $('#item_6').css({
-        top: 400,
-        left: 550
-    });
-    $('#item_7').css({
-        top: 75,
-        left: 400
+    $('#item_7').css({ // door
+        top: 0,
+        left: 0,
+        width: 100,
+        height: 250
     });
 
 
@@ -73,27 +77,34 @@ function clickityClick(currentLayer) {
         }
 
     } else {
+        var currentImg = currentLayer.children('img:first');
+
         if (currentP.is('#bookshelf3')) {
-            /*if ( (($.inArray('pencil', inToolbox))>-1) && (($.inArray('paper', inToolbox))>-1) ) {
-                changeCommentary('somethings happening! watch the rubbing from the desk reveal a secret combination');
-                removeObject(current);
+            if (($.inArray('hint', inToolbox)) > -1) {
+                removeObjectLayer(currentLayer, currentP);
+                changeCommentary('Behind one of the books you find a small key.');
             } else {
-                changeCommentary('youre right, looks like theres something on the desk. keep searching for a way to reveal the writing');
-            }*/
+                changeCommentary('Nothing here yet, but keep looking and come back.');
+            }
         } else if (currentP.is('#officedoor')) {
-            /*if (($.inArray('password', inToolbox)) > -1) {
-                changeCommentary('good job, the password you uncovered on the desk opens this lock');
-                removeObject(current);
+            if (($.inArray('bookmark', inToolbox)) > -1) {
+                removeObjectLayer(currentLayer, currentP);
+                changeCommentary('When you used the password you found in the book and went through the door, you found a clue! It reads "look again in the bookshelves for your next tool".');
             } else {
-                changeCommentary('looks like we need the combination for this lock');
-            }*/
+                changeCommentary('We need a passcode to access this room.');
+            }
         } else if (currentP.is('#book')) {
-
+            removeObjectLayer(currentLayer, currentP);
+            changeCommentary('Great job! You found a bookmark in the book with a password scribbled on it.');
         } else if (currentP.is('#lockbox')) {
-
+            if(($.inArray('boxkey', inToolbox)) > -1) {
+                removeObjectLayer(currentLayer, currentP);
+                changeCommentary('The key you found on the bookshelf unlocked this box.');
+            } else {
+                changeCommentary('This box is locked. We will need to find a way in.');
+            }
         }
     }
-
 
 };
 
@@ -102,12 +113,12 @@ function getLevel() {
 }
 
 function getSolution() {
-    var s1 = '1: Click the book on the table to reveal a bookmark with a code written on it; ';
-    var s2 = '2: Click on the door to the office once you have the code to unlock it. \
-                this will automatically add a slip of paper in your toolbox like you found in the office;';
-    var s3 = '3: The slip of paper has "try the third bookshelf" written on it, so you check this out; ';
-    var s4 = '4: Click on the third bookshelf to obtain the lockbox key; ';
-    var s5 = '5: Use the key to unlock the box, revealing a battering ram; ';
-    var s6 = '6: Use the battering ram with the locked door to plow through it.';
+    var s1 = '1-Click the book on the table to reveal a bookmark with a code written on it. ';
+    var s2 = '2-Click on the door to the office once you have the code to unlock it. \
+                this will automatically add a slip of paper in your toolbox like you found in the office.';
+    var s3 = '3-The slip of paper has "try the third bookshelf" written on it, so you check this out. ';
+    var s4 = '4-Click on the third bookshelf to obtain the lockbox key. ';
+    var s5 = '5-Use the key to unlock the box, revealing a battering ram. ';
+    var s6 = '6-Use the battering ram with the locked door to plow through it.';
     return s1 + s2 + s3 + s4 + s5 + s6;
 }

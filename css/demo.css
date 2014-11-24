@@ -1,0 +1,27 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #00030f;
+    background-image: url(http://www.transparenttextures.com/patterns/padded.png);
+    vertical-align: top;
+}
+
+h1, h2 {
+    font-family: 'Bangers', cursive;
+    padding: 0;
+    margin: 0;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+    color:  gray;
+}
+
+div, video {
+    vertical-align: top;
+    object-fit: fill;
+}

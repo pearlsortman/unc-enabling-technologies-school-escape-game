@@ -9,10 +9,11 @@ body {
 }
 
 h1 {
-	font-size: 4em;
+	font-size: 5em;
 	margin-top: 70px;
 	margin-bottom: 30px;
 	color: white;
+	padding-bottom: 0;
 }
 h2 {
 	font-size: 3em;
@@ -38,7 +39,7 @@ div {
 	padding: 0;
 }
 
-.clickable {
+.container .clickable {
 	display: inline-block;
 	width: 225px;
 	height: 175px;
@@ -56,33 +57,33 @@ div {
 }
 
 #L1 {
-	background-image: url('../images/L1.jpg');
+	background-image: url('../images/backgrounds/L1.jpg');
 }
 
 #L2 {
-	background-image: url('../images/L2.jpg');
+	background-image: url('../images/backgrounds/L2.jpg');
 }
 
 #L3 {
-	background-image: url('../images/L3.jpg');
+	background-image: url('../images/backgrounds/L3.jpg');
 }
 
 #L4 {
-	background-image: url('../images/L4.jpg');
+	background-image: url('../images/backgrounds/L4.jpg');
 }
 
 #L5 {
-	background-image: url('../images/L5.jpg');
+	background-image: url('../images/backgrounds/L5.jpg');
 }
 
 #L6 {
-	background-image: url('../images/L6.jpg');
+	background-image: url('../images/backgrounds/L6.jpg');
 }
 
 #L7 {
-	background-image: url('../images/L7.jpg');
+	background-image: url('../images/backgrounds/L7.jpg');
 }
 
 #L8 {
-	background-image: url('../images/L8.jpg');
+	background-image: url('../images/backgrounds/L8.jpg');
 }

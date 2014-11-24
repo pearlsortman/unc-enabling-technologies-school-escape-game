@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     // set up this level as a unique view adding all images and clickable objects
     $('#header h1').text('Level 6: Art Studio');
-    $('#background').attr('src', 'images/L6.jpg');
+    $('#background').attr('src', 'images/backgrounds/L6.jpg');
 
     //activate items to be used by adding tab order and contents
     $('#item_0').append('<p class="tool" id="pencil">pencil<img src="images/pencil.png"></p>');
@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('#item_3').addClass('clickable')
                 .append('<p class="tool" id="paper">paper<img src="images/papertray.png"></p>');
     $('#item_4').addClass('clickable')
-                .append('<p class="covering" id="cabinet">cabinet</p><p class="hidden tool" id="hammer">hammer<img src="images/hammer.png"></p>');
+                .append('<p class="covering" id="cabinet">cabinet<img src="images/chain.png"></p><p class="hidden tool" id="hammer">hammer<img src="images/hammer.png"></p>');
     $('#item_5').addClass('clickable')
                 .append('<p id="window">window</p>');
 
@@ -89,12 +89,12 @@ function getLevel() {
 };
 
 function getSolution() {
-    var s1 = '1: Click on the pencil to add to toolbox; ';
-    var s2 = '2: Click on the paper to add to toolbox; ';
-    var s3 = '3: Click on the table with the pencil and paper in toolbox to reveal the markings on the table; ';
-    var s4 = '4: Click on the marked paper to add password to toolbox; ';
-    var s5 = '5: Find the lock while the password is in your toolbox to reveal hammer; ';
-    var s6 = '6: Add the hammer to your toolbox; ';
-    var s7 = '7: Use the hammer to break the window and escape.'
+    var s1 = '1-Click on the pencil to add to toolbox. ';
+    var s2 = '2-Click on the paper to add to toolbox. ';
+    var s3 = '3-Click on the table with the pencil and paper in toolbox to reveal the markings on the table. ';
+    var s4 = '4-Click on the marked paper to add password to toolbox. ';
+    var s5 = '5-Find the lock while the password is in your toolbox to reveal hammer. ';
+    var s6 = '6-Add the hammer to your toolbox. ';
+    var s7 = '7-Use the hammer to break the window and escape.';
     return s1 + s2 + s3 + s4 + s5 + s6 + s7;
 };
