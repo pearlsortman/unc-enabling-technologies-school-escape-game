@@ -14,11 +14,11 @@ h1, h2 {
 }
 h1 {
     font-size: 3em;
-    color: #E1E3D8; //light grey almost white
+    color: white;
 }
 h2 {
     font-size: 2em;
-    color: #FCAE0C; // yellow
+    color: orange;
 }
 p {
     font-family: 'Rajdhani', sans-serif;
@@ -26,7 +26,7 @@ p {
 }
 #text {
     font-size: 0.75em;
-    color: #76DBBF; //light blue
+    color: blue;
 }
 
 .clickable p {
@@ -50,6 +50,7 @@ div {
     width: 150px;
     height: 150px;
     position: absolute;
+    cursor: crosshair;
 }
 .entered {
     background-color:rgba(255,0,0,0.2);
@@ -58,8 +59,8 @@ div {
 
 .clickable p {
     font-size: 0em;
-    color: black;
     max-width: 100%;
+    vertical-align: middle;
 }
 .primaryDiv {
     display: block;
@@ -95,7 +96,7 @@ div {
 }
 
 #solution, #commentary, #toolbox {
-    background-color: #F12A1B; //red
+    background-color: red;
 }
 
 #solution {
@@ -114,17 +115,18 @@ div {
 }
 
 #toolbox {
-    background-image: url(http://www.transparenttextures.com/patterns/padded.png);
     width: 290px;
+    height: 525px; 
+    background-image: url(http://www.transparenttextures.com/patterns/padded.png);
 }
 #toolbox table {
     border-collapse: collapse;
     width: 100%;
 }
 td {
-    border: solid thick #E1E3D8; //light grey almost white
     height: 157px;
     width: 140px;
+    border: solid thick white;
 }
 td img {
     max-width: 90%;
@@ -132,7 +134,7 @@ td img {
 }
 
 .entered, .clickable:hover {
-    background-color: green;
+    background-color: rgba(255, 255, 0, 0.2);
 }
 
 .hidden {

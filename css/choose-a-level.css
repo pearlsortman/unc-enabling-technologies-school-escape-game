@@ -10,14 +10,14 @@ html, body {
 
 h1 {
 	font-size: 5em;
-	color: #E1E3D8; //light grey almost white
+	color: white; //light grey almost white
 	padding-bottom: 0;
 	margin-top: 70px;
 	margin-bottom: 30px;
 }
 
 h2, h3 {
-	color: #FCAE0C; // yellow
+	color: orange;
 }
 
 h2 {
@@ -55,15 +55,16 @@ div {
 	margin: 5px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	border: 15px solid #E1E3D8;
+	border: 15px solid white;
+	cursor: crosshair;
 }
 
 .easy, .medium, .hard {
-	border: 15px solid #E1E3D8; //light grey almost white
+	border: 15px solid white; //light grey almost white
 }
 
-.entered h1, .clickable:hover {
-	color: #F12A1B; //red
+.entered h3, .clickable:hover {
+	color: red; //red
 }
 
 #message {
@@ -71,34 +72,11 @@ div {
 	padding-bottom: 0;
 }
 
-#L1 {
-	background-image: url('../images/backgrounds/L1.jpg');
-}
-
-#L2 {
-	background-image: url('../images/backgrounds/L2.jpg');
-}
-
-#L3 {
-	background-image: url('../images/backgrounds/L3.jpg');
-}
-
-#L4 {
-	background-image: url('../images/backgrounds/L4.jpg');
-}
-
-#L5 {
-	background-image: url('../images/backgrounds/L5.jpg');
-}
-
-#L6 {
-	background-image: url('../images/backgrounds/L6.jpg');
-}
-
-#L7 {
-	background-image: url('../images/backgrounds/L7.jpg');
-}
-
-#L8 {
-	background-image: url('../images/backgrounds/L8.jpg');
-}
+#L1 { background-image: url('../images/backgrounds/L1.jpg'); }
+#L2 { background-image: url('../images/backgrounds/L2.jpg'); }
+#L3 { background-image: url('../images/backgrounds/L3.jpg'); }
+#L4 { background-image: url('../images/backgrounds/L4.jpg'); }
+#L5 { background-image: url('../images/backgrounds/L5.jpg'); }
+#L6 { background-image: url('../images/backgrounds/L6.jpg'); }
+#L7 { background-image: url('../images/backgrounds/L7.jpg'); }
+#L8 { background-image: url('../images/backgrounds/L8.jpg'); }

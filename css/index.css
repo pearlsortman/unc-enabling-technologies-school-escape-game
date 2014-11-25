@@ -9,14 +9,14 @@ html, body {
 }
 
 h1 {
-	color: #F5EAB9; // white
+	color: white; // white
 	margin-top: 70px;
 	margin-bottom: 30px;
 	font-size: 8em;
 }
 
 h2, h3 {
-	color: #FCB611; // light orange
+	color: orange; // light orange
 }
 
 h2 {
@@ -44,17 +44,19 @@ div {
 }
 
 .clickable {
-	background-color: #76DBBF; // cyan
 	display: inline-block;
+	background-color: blue; // cyan
+	vertical-align: middle;
 	width: 300px;
 	height: 250px;
 	text-align: center;
 	padding: 0;
 	border-radius: 40px;
-	border: 15px solid #F5EAB9; // white
+	border: 15px solid white; // white
 	margin: 15px;
+	cursor: crosshair;
 }
 
 .entered h3, .clickable:hover {	
-	color: #FC3714; // bright orange
+	color: red; // bright orange
 }

@@ -4,31 +4,53 @@ html, body {
     background-color: #060F12; //dark blue
     margin: auto;
     padding: 0;
+    text-align: center;
+    vertical-align: middle;
 }
 
-h3 {
-    font-size: 3.5em;
-    color: orange;
+#header {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-size: 5em;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+h2 {
+	padding: 0;
+}
+
+h2, h3 {
+	font-size: 3em;
+	color: orange;
+	margin: 0;
 }
 
 div {
-    width: 1100px;
-    margin: auto;
+	margin: auto;
+	vertical-align: middle;
 }
 
-#video {
-    height: 600px;
-    border: thin solid white;
+#message {
+	font-family: Rajdhani, sans-serif;
+	weight: 400;
+	font-size: 3em;
+	color: blue;
 }
 
-#buttons {
-    height: 200px;
+#container {
+	width: 1100px;
+	height: 700px
 }
 
 .clickable {
     display: inline-block;
-    width: 325px;
-    height: 75px;
+    width: 225px;
+    height: 175px;
     text-align: center;
     padding: 0;
     border-radius: 40px;
@@ -36,12 +58,8 @@ div {
     border: 15px solid white;
     cursor: crosshair;
     vertical-align: middle;
+    color: orange;
     background-color: blue;
-}
-
-video {
-    vertical-align: top;
-    object-fit: fill;
 }
 
 .entered {
