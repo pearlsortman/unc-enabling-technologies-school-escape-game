@@ -4,15 +4,13 @@
 <title>SE: L6</title>
 
 <head>
-	<link href='http://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Bangers' rel='stylesheet' type='text/css'></link>
-	<link type="text/css" rel="stylesheet" href="css/all-levels.css"></link>
-
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/L6-artstudio.js"></script>
-	<script type="text/javascript" src="js/genericLevel.js"></script>
+    <?php include 'genericLevelLinks.html'; ?>
 </head>
 
 <body>
+    <?php include 'genericLevel.html'; ?>
 </body>
 
 </html>

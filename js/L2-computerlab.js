@@ -1,42 +1,34 @@
 $(document).ready(function() {
 
-    $('body').load('../comp580_SchoolEscapeGame/genericLevel.html', function() {
-        setup();
+    // set up this level as a unique view adding all images and clickable objects
+    $('#header h1').text('Level 2: The Computer Lab');
+    $('#background').attr('src', 'images/backgrounds/L2.jpg');
+
+    $('#item_0').append('<p class="covering" id="lockbox">lockbox</p>\
+        <p class="hidden tool" id="powercord">powercord<img src="images/powercord.png"></p>');
+    $('#item_1').append('<p class="covering" id="desk">desk</p>\
+        <p class="hidden tool" id="screwdriver">screwdriver<img src="images/screwdriver.png"></p>');
+    $('#item_2').append('<p id="computer">computer</p>');
+
+    changeCommentary('As you whip open the door of the classroom, \
+            you feel the floor slip out from underneath your feet. \
+            You slide across the hallway on your bum, catching a glimpse of the “Wet Floor” \
+            sign out of the corner of your eye. When you finally stop sliding, you take a moment to take in your surroundings. \
+            Computers. Everywhere. The door clicks shut behind you. Here we go again…');
+
+    $('#item_0').css({ //lockbox & powercord
+        top: 0,
+        left: 510
     });
-
-    function setup() {
-
-        // set up this level as a unique view adding all images and clickable objects
-        $('#header h1').text('Level 2: The Computer Lab');
-        $('#background').attr('src', 'images/backgrounds/L2.jpg');
-
-        $('#item_0').append('<p class="covering" id="lockbox">lockbox</p>\
-            <p class="hidden tool" id="powercord">powercord<img src="images/powercord.png"></p>');
-        $('#item_1').append('<p class="covering" id="desk">desk</p>\
-            <p class="hidden tool" id="screwdriver">screwdriver<img src="images/screwdriver.png"></p>');
-        $('#item_2').append('<p id="computer">computer</p>');
-
-        changeCommentary('As you whip open the door of the classroom, \
-                you feel the floor slip out from underneath your feet. \
-                You slide across the hallway on your bum, catching a glimpse of the “Wet Floor” \
-                sign out of the corner of your eye. When you finally stop sliding, you take a moment to take in your surroundings. \
-                Computers. Everywhere. The door clicks shut behind you. Here we go again…');
-
-        $('#item_0').css({ //lockbox & powercord
-            top: 0,
-            left: 510
-        });
-        $('#item_1').css({ //desk & screwdriver
-            top: 125,
-            left: 20,
-            width: 200
-        });
-        $('#item_2').css({ //computer
-            top: 0,
-            left: 325
-        });
-
-    };
+    $('#item_1').css({ //desk & screwdriver
+        top: 125,
+        left: 20,
+        width: 200
+    });
+    $('#item_2').css({ //computer
+        top: 0,
+        left: 325
+    });
 
 });
 

@@ -1,59 +1,51 @@
 $(document).ready(function() {
 
-    $('body').load('../comp580_SchoolEscapeGame/genericLevel.html', function() {
-        setup();
+    // set up this level as a unique view adding all images and clickable objects
+    $('#header h1').text('Level 5: Principals Office');
+    $('#background').attr('src', 'images/backgrounds/L5.jpg');
+
+    //activate items to be used by adding tab order and contents
+    $('#item_0').append('<p class="dummy">desk</p>');
+    $('#item_1').append('<p class="covering" id="cabinet">cabinet</p>\
+                        <p class="hidden tool" id="hammer">hammer<img src="images/hammer.png"></p>');
+    $('#item_2').append('<p class="covering" id="couch">couch</p>\
+                        <p class="hidden tool" id="cabinetkey">cabinet key<img src="images/smallkey.png"></p>');
+    $('#item_3').addClass('clickable')
+                .append('<p class="covering" id="plant">plant<img src="images/plant.png"></p>\
+                        <p class="hidden tool" id="doorkey">door key<img src="images/doorkey.png"></p>');
+    $('#item_4').addClass('clickable')
+                .append('<p id="exit">door</p>');
+
+    changeCommentary('After learning about “numbers” you realized that there is not a lot of recess time left. \
+            You bolt out the classroom and rocket down the hallway. However, you see a teacher coming. \
+            Knowing that you should not be wandering around the school unsupervised, you duck into the nearest room. \
+            The door shuts behind you and locks with a “Click!” You stumble around in the darkness and blindly reach out for a light switch. \
+            The light flickers on and the true nature of the situation dawns upon you. Oh no! You’ve locked yourself in the Principal’s Office!');
+
+    $('#item_0').css({ //desk
+        top: 150,
+        left: 500
     });
-
-    function setup() {
-
-        // set up this level as a unique view adding all images and clickable objects
-        $('#header h1').text('Level 5: Principals Office');
-        $('#background').attr('src', 'images/backgrounds/L5.jpg');
-
-        //activate items to be used by adding tab order and contents
-        $('#item_0').append('<p class="dummy">desk</p>');
-        $('#item_1').append('<p class="covering" id="cabinet">cabinet</p>\
-                            <p class="hidden tool" id="hammer">hammer<img src="images/hammer.png"></p>');
-        $('#item_2').append('<p class="covering" id="couch">couch</p>\
-                            <p class="hidden tool" id="cabinetkey">cabinet key<img src="images/smallkey.png"></p>');
-        $('#item_3').addClass('clickable')
-                    .append('<p class="covering" id="plant">plant<img src="images/plant.png"></p>\
-                            <p class="hidden tool" id="doorkey">door key<img src="images/doorkey.png"></p>');
-        $('#item_4').addClass('clickable')
-                    .append('<p id="exit">door</p>');
-
-        changeCommentary('After learning about “numbers” you realized that there is not a lot of recess time left. \
-                You bolt out the classroom and rocket down the hallway. However, you see a teacher coming. \
-                Knowing that you should not be wandering around the school unsupervised, you duck into the nearest room. \
-                The door shuts behind you and locks with a “Click!” You stumble around in the darkness and blindly reach out for a light switch. \
-                The light flickers on and the true nature of the situation dawns upon you. Oh no! You’ve locked yourself in the Principal’s Office!');
-
-        $('#item_0').css({ //desk
-            top: 150,
-            left: 500
-        });
-        $('#item_1').css({ //cabinet & hammer
-            top: 100,
-            left: 325,
-            height: 200
-        });
-        $('#item_2').css({ //couch & cabinet key
-            top: 200,
-            left: 0,
-            width: 200,
-            height: 225
-        });
-        $('#item_3').css({ //potted plant & door key
-            top: 310,
-            left: 590
-        });
-        $('#item_4').css({ //door
-            top: 50,
-            left: 200,
-            height: 225
-        });
-
-    };
+    $('#item_1').css({ //cabinet & hammer
+        top: 100,
+        left: 325,
+        height: 200
+    });
+    $('#item_2').css({ //couch & cabinet key
+        top: 200,
+        left: 0,
+        width: 200,
+        height: 225
+    });
+    $('#item_3').css({ //potted plant & door key
+        top: 310,
+        left: 590
+    });
+    $('#item_4').css({ //door
+        top: 50,
+        left: 200,
+        height: 225
+    });
 
 });
 

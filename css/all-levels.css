@@ -20,12 +20,13 @@ h2 {
     font-size: 2em;
     color: #FCAE0C; // yellow
 }
-
+p {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
 #text {
     font-size: 0.75em;
     color: #76DBBF; //light blue
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
 }
 
 .clickable p {
@@ -49,7 +50,6 @@ div {
     width: 150px;
     height: 150px;
     position: absolute;
-    cursor: crosshair;
 }
 .entered {
     background-color:rgba(255,0,0,0.2);
@@ -114,9 +114,8 @@ div {
 }
 
 #toolbox {
-    width: 290px;
-    height: 525px;
     background-image: url(http://www.transparenttextures.com/patterns/padded.png);
+    width: 290px;
 }
 #toolbox table {
     border-collapse: collapse;
@@ -133,7 +132,7 @@ td img {
 }
 
 .entered, .clickable:hover {
-    border: thin solid black;
+    background-color: green;
 }
 
 .hidden {

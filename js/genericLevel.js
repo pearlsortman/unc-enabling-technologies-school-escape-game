@@ -23,16 +23,12 @@ $(document).ready(function() {
             $(focusObject).addClass('entered');
 
         } else if (e.keyCode == 13 || e.keyCode == 37) { // enter=13, left arrow=37 <<<< ENTER KEYS
-            alert('something clicked');
-            alert($(focusObject).html());
             $(focusObject).trigger('click');
-            alert('click triggered');
         }
     });
 
     // click event determines what to do when the focused object is click and delegates to level-specific js when needed
     $('.clickable').click(function() {
-        alert('click function executed');
         $('#text').css('font-size', '1.5em');
 
         var currentLayer = $(this);
@@ -66,6 +62,13 @@ function removeObjectLayer(currentLayer, removeP) {
     currentP = currentLayer.children('p:first');
     currentP.removeClass('hidden');
 };
+
+/*function removeObjectLayerWithImage(currentLayer, removeP, removeImg) {
+    removeP.remove();
+    removeImg.remove();
+    currentP = currentLayer.children('p:first');
+    currentP.removeClass('hidden');
+};*/
 
 
 /*

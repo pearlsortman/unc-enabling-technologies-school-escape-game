@@ -1,62 +1,54 @@
 $(document).ready(function() {
 
-    $('body').load('../comp580_SchoolEscapeGame/genericLevel.html', function() {
-        setup();
+    // set up this level as a unique view adding all images and clickable objects
+    $('#header h1').text('Level 6: Art Studio');
+    $('#background').attr('src', 'images/backgrounds/L6.jpg');
+
+    //activate items to be used by adding tab order and contents
+    $('#item_0').append('<p class="tool" id="pencil">pencil<img src="images/pencil.png"></p>');
+    $('#item_1').append('<p class="dummy">paintbrush<img src="images/paintbrush.png"></p>');
+    $('#item_2').append('<p class="covering" id="desk">desk</p><p class="hidden tool" id="password">password<img src="images/password.png"></p>');
+    $('#item_3').addClass('clickable')
+                .append('<p class="tool" id="paper">paper<img src="images/papertray.png"></p>');
+    $('#item_4').addClass('clickable')
+                .append('<p class="covering" id="cabinet">cabinet<img src="images/chain.png"></p><p class="hidden tool" id="hammer">hammer<img src="images/hammer.png"></p>');
+    $('#item_5').addClass('clickable')
+                .append('<p id="window">window</p>');
+
+    changeCommentary('Success! You are able to leave the Principal’s Office. Last time you were there, \
+            you definitely did not leave in one piece (or in peace). Walking through the hallway, you suddenly \
+            feel the floor slip out from beneath your feet. You slide across the hallway on your bum, catching a \
+            glimpse of the “Wet Floor” sign out of the corner of your eye. Simultaneously, you think “How dare the writer \
+            recycle the same transition between rooms in order to save time.” As you ponder this obviously false and \
+            ludicrous inquiry, you find yourself locked in an art room.');
+
+    $('#item_0').css({ // pencil
+        top: 150,
+        left: 50
     });
-
-    function setup() {
-
-        // set up this level as a unique view adding all images and clickable objects
-        $('#header h1').text('Level 6: Art Studio');
-        $('#background').attr('src', 'images/backgrounds/L6.jpg');
-
-        //activate items to be used by adding tab order and contents
-        $('#item_0').append('<p class="tool" id="pencil">pencil<img src="images/pencil.png"></p>');
-        $('#item_1').append('<p class="dummy">paintbrush<img src="images/paintbrush.png"></p>');
-        $('#item_2').append('<p class="covering" id="desk">desk</p><p class="hidden tool" id="password">password<img src="images/password.png"></p>');
-        $('#item_3').addClass('clickable')
-                    .append('<p class="tool" id="paper">paper<img src="images/papertray.png"></p>');
-        $('#item_4').addClass('clickable')
-                    .append('<p class="covering" id="cabinet">cabinet<img src="images/chain.png"></p><p class="hidden tool" id="hammer">hammer<img src="images/hammer.png"></p>');
-        $('#item_5').addClass('clickable')
-                    .append('<p id="window">window</p>');
-
-        changeCommentary('Success! You are able to leave the Principal’s Office. Last time you were there, \
-                you definitely did not leave in one piece (or in peace). Walking through the hallway, you suddenly \
-                feel the floor slip out from beneath your feet. You slide across the hallway on your bum, catching a \
-                glimpse of the “Wet Floor” sign out of the corner of your eye. Simultaneously, you think “How dare the writer \
-                recycle the same transition between rooms in order to save time.” As you ponder this obviously false and \
-                ludicrous inquiry, you find yourself locked in an art room.');
-
-        $('#item_0').css({ // pencil
-            top: 150,
-            left: 50
-        });
-        $('#item_1').css({ // paintbrush
-            top: 310,
-            left: 100
-        });
-        $('#item_2').css({ // desk & password
-            top: 200,
-            left: 425,
-            width: 250
-        });
-        $('#item_3').css({ // paper
-            top: 375,
-            left: 650
-        });
-        $('#item_4').css({ // cabinet & hammer
-            top: 70,
-            left:480
-        });
-        $('#item_5').css({ // window
-            top: 0,
-            left: 275,
-            width: 200,
-            height: 200
-        });
-
-    };
+    $('#item_1').css({ // paintbrush
+        top: 310,
+        left: 100
+    });
+    $('#item_2').css({ // desk & password
+        top: 200,
+        left: 425,
+        width: 250
+    });
+    $('#item_3').css({ // paper
+        top: 375,
+        left: 650
+    });
+    $('#item_4').css({ // cabinet & hammer
+        top: 70,
+        left:480
+    });
+    $('#item_5').css({ // window
+        top: 0,
+        left: 275,
+        width: 200,
+        height: 200
+    });
 
 });
 
