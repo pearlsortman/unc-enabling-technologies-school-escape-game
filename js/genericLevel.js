@@ -62,13 +62,6 @@ function removeObjectLayer(currentLayer, removeP) {
     currentP.removeClass('hidden');
 };
 
-/*function removeObjectLayerWithImage(currentLayer, removeP, removeImg) {
-    removeP.remove();
-    removeImg.remove();
-    currentP = currentLayer.children('p:first');
-    currentP.removeClass('hidden');
-};*/
-
 
 /*
     taking a tool and its corresponding image, called from the main click() function above
@@ -106,21 +99,25 @@ function isLevelOver() {
         var nextLevel = getLevel() + 1;
         var nextLevelLink = 'L' + nextLevel + '.php';
         if (nextLevel < 9) {
-            setTimeout(function() {
+            
                 if (nextLevel == 4) {
-                    window.location.replace('easyComplete.html');
+                    setTimeout(function() { 
+                        window.location.replace('easyComplete.html'); 
+                    }, 1000);
                 } else if (nextLevel == 7) {
-                    window.location.replace('mediumComplete.html');
+                    setTimeout(function() {
+                        window.location.replace('mediumComplete.html');
+                    }, 1000);
                 } else {
-                    $('#text').css('font-size', '2.75em');
+                    $('#text').css('font-size', '2.5em');
                     changeCommentary('Congratulations! You made it to level ' + nextLevel);
-                    window.location.replace(nextLevelLink);
+                    setTimeout(function() {
+                        window.location.replace(nextLevelLink);
+                    }, 3000);
                 }
-            }, 3000);
-
+            
         } else {
             window.location.replace('hardComplete.html');
-            /*changeCommentary('Wow, great job! You made through all the levels! Enjoy the outside world again.');*/
         }
     }
     return levelOver;

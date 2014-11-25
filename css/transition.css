@@ -1,7 +1,7 @@
 html, body {
     font-family: 'Bangers', cursive;
     background-image: url(http://www.transparenttextures.com/patterns/padded.png);
-    background-color: #060F12; //dark blue
+    background-color: #060F12; //dark #76DBBF
     margin: auto;
     padding: 0;
     text-align: center;
@@ -15,7 +15,7 @@ html, body {
 
 h1 {
 	font-size: 5em;
-	color: white;
+	color: #F5EAB9;
 	padding: 0;
 	margin: 0;
 }
@@ -26,7 +26,7 @@ h2 {
 
 h2, h3 {
 	font-size: 3em;
-	color: orange;
+	color: #FCB611;
 	margin: 0;
 }
 
@@ -39,7 +39,7 @@ div {
 	font-family: Rajdhani, sans-serif;
 	weight: 400;
 	font-size: 3em;
-	color: blue;
+	color: #76DBBF;
 }
 
 #container {
@@ -55,17 +55,17 @@ div {
     padding: 0;
     border-radius: 40px;
     margin: 5px;
-    border: 15px solid white;
+    border: 15px solid #F5EAB9;
     cursor: crosshair;
     vertical-align: middle;
-    color: orange;
-    background-color: blue;
+    color: #FCB611;
+    background-color: #76DBBF;
 }
 
-.entered {
-    color: red;
+.entered h3 {
+    color: #FC3714;
 }
 
 .clickable :hover {
-    color: red;
+    color: #FC3714;
 }
