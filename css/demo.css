@@ -9,16 +9,26 @@ html, body {
 }
 
 h1 {
-	font-size: 8em;
-	color: #E1E3D8; //light grey almost white
+	font-size: 3em;
 }
 
 h2 {
-	font-size: 3em;
-	color: #FCAE0C; // yellow
+	font-size: 2em;
 }
 
 video {
     vertical-align: top;
     object-fit: fill;
+}
+
+div {
+    display: inline-block;
+}
+
+.entered {
+    color: yellow;
+}
+
+.clickable :hover {
+    color: yellow;
 }

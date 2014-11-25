@@ -37,22 +37,26 @@ div {
 	float: none;
 }
 
-.header, .container {
+#header, #container {
 	width: 1100px;
 	margin: auto;
 	padding: 0;
 }
 
-.clickable {
-	background-color: #76DBBF; // cyan
+#container .clickable {
 	display: inline-block;
+	background-color: #76DBBF; // cyan
+	vertical-align: center;
 	width: 300px;
 	height: 250px;
 	text-align: center;
 	padding: 0;
 	border-radius: 40px;
-	border: 15px solid #F5EAB9; // white
-	margin: 15px;
+	margin: 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 15px solid #E1E3D8;
+	cursor: crosshair;
 }
 
 .entered h3, .clickable:hover {	

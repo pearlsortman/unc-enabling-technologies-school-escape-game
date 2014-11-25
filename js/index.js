@@ -25,26 +25,24 @@ $(document).ready(function() {
     $('.clickable').click(function() {
         if (this.id=='demo') {
         	window.location.replace('demo.html');
-        } else if (this.id=='play') {
-        	window.location.replace('L1.php');
+        } else if (this.id=='play' || this.id=='L1') {
+        	window.location.replace('L1.html');
         } else if (this.id=='level') {
             window.location.replace('choose-a-level.html');
-        } else if (this.id=='L1') {
-            window.location.replace('L1.php');
         } else if (this.id=='L2') {
-            window.location.replace('L2.php');
+            window.location.replace('L2.html');
         } else if (this.id=='L3') {
-            window.location.replace('L3.php');
+            window.location.replace('L3.html');
         } else if (this.id=='L4') {
-            window.location.replace('L4.php');
+            window.location.replace('L4.html');
         } else if (this.id=='L5') {
-            window.location.replace('L5.php');
+            window.location.replace('L5.html');
         } else if (this.id=='L6') {
-            window.location.replace('L6.php');
+            window.location.replace('L6.html');
         } else if (this.id=='L7') {
-            window.location.replace('L7.php');
+            window.location.replace('L7.html');
         } else if (this.id=='L8') {
-            window.location.replace('L8.php');
+            window.location.replace('L8.html');
         } else if (this.id=='home') {
             window.location.replace('index.html');
         }
