@@ -25,12 +25,7 @@ p {
 }
 #text {
     font-size: 0.75em;
-    color: #76DBBF;
-}
-
-.clickable p {
-    width: 150px;
-    height: 150px;
+    color: #060F12;
 }
 
 img {
@@ -51,15 +46,13 @@ div {
     position: absolute;
     cursor: crosshair;
 }
-.entered {
-    background-color:rgba(255,0,0,0.2);
-    color: #76DBBF;
-}
 
 .clickable p {
     font-size: 0em;
     max-width: 100%;
     vertical-align: middle;
+    width: 150px;
+    height: 150px;
 }
 .primaryDiv {
     display: block;
@@ -94,28 +87,35 @@ div {
     width: 100%;
 }
 
-#solution, #commentary, #toolbox {
+#home, #solution, #commentary, #toolbox {
     background-color: #FC3714;
 }
 
-#solution {
-    margin-right: 10px;
-    margin-top: 10px;
-    width: 290px;
-    position: relative;
-    border-radius: 0px;
-    opacity: 1.0;
-    height: 100px;
-}
 #commentary {
-    height: 100px;
+    height: 80px;
     margin-top: 10px;
-    width: 800px;
+    width: 1080px;
+    padding: 10px;
+}
+
+#home, #solution, #toolbox {
+    float: left;
+    position: relative;
+    width: 290px;
+}
+
+#home, #solution {
+    height: 110px;
+    border-radius: 0px;
+}
+
+#solution, #toolbox {
+    margin-top: 10px;
 }
 
 #toolbox {
     width: 290px;
-    height: 525px; 
+    height: 285px; 
     background-image: url(http://www.transparenttextures.com/patterns/padded.png);
 }
 #toolbox table {
@@ -123,7 +123,7 @@ div {
     width: 100%;
 }
 td {
-    height: 157px;
+    height: 119px;
     width: 140px;
     border: solid thick #F5EAB9;
 }
@@ -133,11 +133,11 @@ td img {
 }
 
 .entered, .clickable:hover {
-    background-color: rgba(255, 255, 0, 0.2);
+    background-color: rgba(255, 0, 0, 0.2);
 }
 
 .entered h2 {
-    color: #76DBBF;
+    color: #060F12;
 }
 
 .hidden {

@@ -1,7 +1,7 @@
 html, body {
 	font-family: 'Bangers', cursive;
 	background-image: url(http://www.transparenttextures.com/patterns/padded.png);
-	background-color: #060F12; //dark blue
+	background-color: #060F12; //dark #76DBBF
 	margin: auto;
 	padding: 0;
 	text-align: center;
@@ -9,14 +9,14 @@ html, body {
 }
 
 h1 {
-	color: white; // white
+	color: #F5EAB9; // #F5EAB9
 	margin-top: 70px;
 	margin-bottom: 30px;
 	font-size: 8em;
 }
 
 h2, h3 {
-	color: orange; // light orange
+	color: #FCB611; // light #FCB611
 }
 
 h2 {
@@ -45,18 +45,18 @@ div {
 
 .clickable {
 	display: inline-block;
-	background-color: blue; // cyan
+	background-color: #76DBBF; // cyan
 	vertical-align: middle;
 	width: 300px;
 	height: 250px;
 	text-align: center;
 	padding: 0;
 	border-radius: 40px;
-	border: 15px solid white; // white
+	border: 15px solid #F5EAB9; // #F5EAB9
 	margin: 15px;
 	cursor: crosshair;
 }
 
 .entered h3, .clickable:hover {	
-	color: red; // bright orange
+	color: #FC3714; // bright #FCB611
 }

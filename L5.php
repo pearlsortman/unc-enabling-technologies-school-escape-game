@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset='utf-8'>
-<title>SE: L5</title>
+<title>School Escape | Level 5</title>
 
 <head>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

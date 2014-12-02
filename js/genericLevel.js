@@ -36,7 +36,8 @@ $(document).ready(function() {
         if (currentLayer.is('#solution')) {
             $('#text').css('font-size', '1em');
             changeCommentary(getSolution());
-
+        } else if (currentLayer.is('#home')) {
+            window.location.replace('index.html');
         } else if (currentP.hasClass('dummy')) {
             changeCommentary('Nothing useful with the ' + currentP.text() + ', keep looking.');
 
@@ -75,7 +76,7 @@ function moveToToolbox(tool, image) {
     inToolbox.push($(tool).text()); // adds the text of the p tag with this current object to the array for searching later
     nextOpen++; // increments the counter keeping track of the next open cell in the toolbox table
 
-    changeCommentary('you have sucessfully added the ' + $(tool).text() + ' into your toolbox');
+    changeCommentary('You have sucessfully added the ' + $(tool).text() + ' into your toolbox.');
 };
 
 

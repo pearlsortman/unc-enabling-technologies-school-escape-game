@@ -1,14 +1,14 @@
 html, body {
     font-family: 'Bangers', cursive;
     background-image: url(http://www.transparenttextures.com/patterns/padded.png);
-    background-color: #060F12; //dark blue
+    background-color: #060F12; //dark #76DBBF
     margin: auto;
     padding: 0;
 }
 
 h3 {
     font-size: 3.5em;
-    color: orange;
+    color: #FCB611;
 }
 
 div {
@@ -18,7 +18,7 @@ div {
 
 #video {
     height: 600px;
-    border: thin solid white;
+    border: thin solid #F5EAB9;
 }
 
 #buttons {
@@ -33,10 +33,10 @@ div {
     padding: 0;
     border-radius: 40px;
     margin: 5px;
-    border: 15px solid white;
+    border: 15px solid #F5EAB9;
     cursor: crosshair;
     vertical-align: middle;
-    background-color: blue;
+    background-color: #76DBBF;
 }
 
 video {
@@ -45,9 +45,9 @@ video {
 }
 
 .entered {
-    color: red;
+    color: #FC3714;
 }
 
 .clickable :hover {
-    color: red;
+    color: #FC3714;
 }
