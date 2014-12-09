@@ -4,43 +4,68 @@
 <title>School Escape | All Levels</title>
 
 <head>
-	<link type="text/css" rel="stylesheet" href="css/choose-a-level.css"></link>
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Bangers' rel='stylesheet' type='text/css'></link>
-	<script type="text/javascript" src="js/index.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/choose-a-level-option2.css"></link>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Bangers' rel='stylesheet' type='text/css'></link>
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 
 <body>
-	<div class="header clickable" id="home">
-		<h1>School Escape</h1>
-		<h2>Choose your adventure.</h2>
-	</div>	
-	<div class="container">				 															
-		<div class="clickable easy" id="L1">
-			<h3>Level 1<br/>Classroom</h3>
-		</div>		
-		<div class="clickable easy" id="L2">
-			<h3>Level 2<br/>Computer Lab</h3>
-		</div>
-		<div class="clickable easy" id="L3">
-			<h3>Level 3<br/>Cafeteria</h3>
-		</div>
-		<div class="clickable medium" id="L4">
-			<h3>Level 4<br/>Math Classroom</h3>
-		</div>		
-		<div class="clickable medium" id="L5">
-			<h3>Level 5<br/>Principal's Office</h3>
-		</div>
-		<div class="clickable medium" id="L6">
-			<h3>Level 6<br/>Art Studio</h3>
-		</div>
-		<div class="clickable hard" id="L7">
-			<h3>Level 7<br/>Library</h3>
-		</div>		
-		<div class="clickable hard" id="L8">
-			<h3>Level 8<br/>Gymnasium</h3>
-		</div>
-	</div>
+    <div id="container">
+        <div class="clickable" id="home">
+            <h1>School Escape</h1>
+            <h2>Choose your adventure.</h2>
+        </div>
+
+        <div id="levels">
+
+            <div class="levelHeader" id="easy">
+                <div class="difficulty easy">
+                    <h3>Easy</h3>
+                </div>
+                <div class="clickable easy level" id="L1">
+                    <h3>Level 1<br/>Classroom</h3>
+                </div>
+                <div class="clickable easy level" id="L2">
+                    <h3>Level 2<br/>Computer Lab</h3>
+                </div>
+                <div class="clickable easy level" id="L3">
+                    <h3>Level 3<br/>Cafeteria</h3>
+                </div>
+            </div>
+
+            <div class="levelHeader" id="medium">
+                <div class="difficulty medium">
+                    <h3>Medium</h3>
+                </div>
+                <div class="clickable medium level" id="L4">
+                    <h3>Level 4<br/>Math Classroom</h3>
+                </div>
+                <div class="clickable medium level" id="L5">
+                    <h3>Level 5<br/>Principal's Office</h3>
+                </div>
+                <div class="clickable medium level" id="L6">
+                    <h3>Level 6<br/>Art Studio</h3>
+                </div>
+            </div>
+
+            <div class="levelHeader" id="hard">
+                <div class="difficulty hard">
+                    <h3>Hard</h3>
+                </div>
+                <div class="clickable hard level" id="L7">
+                    <h3>Level 7<br/>Library</h3>
+                </div>
+                <div class="clickable hard level" id="L8">
+                    <h3>Level 8<br/>Gymnasium</h3>
+                </div>
+                <div class="clickable hard level" id="L9">
+                	<h3>Level 9<br />Coming Soon</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
