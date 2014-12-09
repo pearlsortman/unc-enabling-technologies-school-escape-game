@@ -25,24 +25,26 @@ h1 {
 h2 {
     font-size: 1.75em;
 }
-#text {
+p {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
     font-size: 1em;
     color: #292929;
     padding-top: 0;
 }
-
+.clickable p {
+    font-size: 0em;
+    max-width: 100%;
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    padding: 0;
+}
 img {
     max-width: 100%;
     max-height: 100%;
 }
 
-div {
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-}
 .clickable {
     margin: 0;
     border-radius: 30px;
@@ -52,33 +54,23 @@ div {
     cursor: crosshair;
 }
 
-.clickable p {
-    font-size: 0em;
-    max-width: 100%;
-    vertical-align: middle;
-    width: 150px;
-    height: 150px;
-}
 .primaryDiv {
     display: block;
     margin-left: 0;
     margin-right: 0;
 }
-
 .secondaryDiv {
     float: left;
 }
-
 #header {
+    width: 980px;
     padding: 10px;
-    height: 45px;
+    height: 50px;
 }
-
 #main {
     height: 525px;
     text-align: center;
 }
-
 #scene {
     margin-right: 10px;
     width: 800px;
@@ -89,16 +81,17 @@ div {
     height: 525px;
     width: 100%;
 }
-
 #commentary {
     background-color: #F2B33D;
     vertical-align: middle;
-    height: 80px;
+    height: 138px;    
+    width: 983px;
     margin: 10px 0px 0px 0px;
-    width: 980px;
-    padding: 0px 0px 20px 20px;
+    padding: 5px 20px 20px 20px;
     text-align: left;
 }
+
+
 
 .button {
     height: 90px;
@@ -106,19 +99,16 @@ div {
     background-color: #292929;
     padding-top: 20px;
 }
-
-#solution, #toolbox {
-    margin-top: 10px;
-}
-
 .right {
-    width: 190px;
+    width: 213px;
     margin-right: 0;
     float: left;
     position: relative;
     background-color: #292929;
 }
-
+#solution, #toolbox {
+    margin-top: 10px;
+}
 #toolbox {
     height: 285px;
     background-image: url(http://www.transparenttextures.com/patterns/padded.png);
@@ -136,6 +126,8 @@ td img {
     max-width: 90%;
     max-height: 90%;
 }
+
+
 
 .entered, .clickable:hover {
     background-color: rgba(255, 0, 0, 0.2);
