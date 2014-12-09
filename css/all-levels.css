@@ -8,6 +8,12 @@ html, body {
     vertical-align: middle;
 }
 
+#container {
+    width: 1024px;
+    height: 768px;
+    margin: auto;
+}
+
 h1, h2 {
     padding: 0;
     margin: 0;
@@ -17,14 +23,11 @@ h1 {
     font-size: 3em;
 }
 h2 {
-    font-size: 2em;
-}
-p {
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    padding-top: 0;
+    font-size: 1.75em;
 }
 #text {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
     font-size: 1em;
     color: #292929;
     padding-top: 0;
@@ -58,9 +61,8 @@ div {
 }
 .primaryDiv {
     display: block;
-    width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .secondaryDiv {
@@ -75,12 +77,11 @@ div {
 #main {
     height: 525px;
     text-align: center;
-    width: 1024px;
 }
 
 #scene {
     margin-right: 10px;
-    width: 744px;
+    width: 800px;
     position: relative;
 }
 #background {
@@ -92,36 +93,34 @@ div {
 #commentary {
     background-color: #F2B33D;
     vertical-align: middle;
-}
-
-#commentary {
     height: 80px;
-    margin-top: 10px;
-    width: 1004px;
+    margin: 10px 0px 0px 0px;
+    width: 980px;
     padding: 0px 0px 20px 20px;
     text-align: left;
 }
 
-#home, #solution, #toolbox {
-    float: left;
-    position: relative;
-    width: 270px;
-}
-
-#home, #solution {
-    height: 110px;
-    border-radius: 0px;
+.button {
+    height: 90px;
+    border-radius: 10px;
     background-color: #292929;
+    padding-top: 20px;
 }
 
 #solution, #toolbox {
     margin-top: 10px;
 }
 
-#toolbox {
-    width: 270px;
-    height: 285px;
+.right {
+    width: 190px;
+    margin-right: 0;
+    float: left;
+    position: relative;
     background-color: #292929;
+}
+
+#toolbox {
+    height: 285px;
     background-image: url(http://www.transparenttextures.com/patterns/padded.png);
 }
 #toolbox table {
@@ -129,7 +128,7 @@ div {
     width: 100%;
 }
 td {
-    height: 115px;
+    height: 118px;
     width: 140px;
     border: solid thick white;
 }
