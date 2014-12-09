@@ -1,0 +1,104 @@
+html, body {
+	font-family: 'Bangers', sans-serif;
+	background-image: url(http://www.transparenttextures.com/patterns/padded.png);
+	background-color: #2BBFBD;
+	vertical-align: middle;
+	margin: auto;
+	padding: 0;
+}
+
+h1 {
+	color: white;
+	font-size: 5em;
+}
+h2 {
+	color: #F29B30;
+	font-size: 3em;
+}
+h1, h2 {
+	margin: 10px 0px 10px 0px;
+	padding: 0px;
+}
+
+h3 {
+	color: white;
+	font-size: 2em;
+	position: relative;
+}
+
+div {
+	vertical-align: middle;
+}
+
+#container {
+	width: 1024px;
+	height: 768px;
+	margin: auto;
+	padding: 0;
+}
+
+#levels {
+	width: 1024px;
+	margin: auto;
+	padding: 0;
+}
+
+#home {
+	text-align: center;
+}
+
+#levels {
+	margin-top: 20px;
+}
+
+.levelHeader {
+	height: 200px;
+}
+
+.levelHeader .clickable, .difficulty {
+	display: inline-block;
+	width: 230px;
+	height: 149px;
+	border-radius: 40px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	cursor: crosshair;
+	margin: 15px;
+	text-align: center;
+}
+
+.easy {
+	border: 15px solid #F2B33D;
+}
+
+.medium {
+	border: 15px solid #292929;
+}
+
+.hard {
+	border: 15px solid #F22E2E;
+}
+
+.difficulty {
+	border: none;
+	text-align: right;
+	vertical-align: middle;
+	width: 100px;
+}
+
+.entered h3, .clickable:hover {
+	color: #FC3714;
+}
+
+.entered h1 {
+	color: #FC3714;
+}
+
+#L1 { background-image: url('../images/backgrounds/L1.jpg'); }
+#L2 { background-image: url('../images/backgrounds/L2.jpg'); }
+#L3 { background-image: url('../images/backgrounds/L3.jpg'); }
+#L4 { background-image: url('../images/backgrounds/L4.jpg'); }
+#L5 { background-image: url('../images/backgrounds/L5.jpg'); }
+#L6 { background-image: url('../images/backgrounds/L6.jpg'); }
+#L7 { background-image: url('../images/backgrounds/L7.jpg'); }
+#L8 { background-image: url('../images/backgrounds/L8.jpg'); }
