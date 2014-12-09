@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+<title>School Escape | Demo</title>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="css/demo.css"></link>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Bangers' rel='stylesheet' type='text/css'></link>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+    <div id="video">
+        <video width="1100" height="600" autoplay>
+            <source src="test.ogg" type="video/ogg">
+        </video>
+    </div>
+    <div id="buttons">
+        <h3 class="clickable" id="demo">Watch Again</h3>
+        <h3 class="clickable" id="home">Home</h3>
+        <h3 class="clickable" id="L1">Start Game</h3>
+    </div>
+</body>
+
+<!-- Script automatically returns to the home screen after 1.5 minutes -->
+<script>
+setTimeout(function() {
+    window.location.replace('index.html');
+}, 40000);
+</script>
+
+</html>

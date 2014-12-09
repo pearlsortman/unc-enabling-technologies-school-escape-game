@@ -1,0 +1,53 @@
+html, body {
+    font-family: 'Bangers', cursive;
+    background-image: url(http://www.transparenttextures.com/patterns/padded.png);
+    background-color: #060F12; //dark #76DBBF
+    margin: auto;
+    padding: 0;
+}
+
+h3 {
+    font-size: 3.5em;
+    color: #FCB611;
+}
+
+div {
+    width: 1100px;
+    margin: auto;
+}
+
+#video {
+    height: 600px;
+    border: thin solid #F5EAB9;
+}
+
+#buttons {
+    height: 200px;
+}
+
+.clickable {
+    display: inline-block;
+    width: 325px;
+    height: 75px;
+    text-align: center;
+    padding: 0;
+    border-radius: 40px;
+    margin: 5px;
+    border: 15px solid #F5EAB9;
+    cursor: crosshair;
+    vertical-align: middle;
+    background-color: #76DBBF;
+}
+
+video {
+    vertical-align: top;
+    object-fit: fill;
+}
+
+.entered {
+    color: #FC3714;
+}
+
+.clickable :hover {
+    color: #FC3714;
+}
