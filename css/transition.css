@@ -1,49 +1,53 @@
 html, body {
     font-family: 'Bangers', cursive;
     background-image: url(http://www.transparenttextures.com/patterns/padded.png);
-    background-color: #060F12; //dark #76DBBF
+    background-color: #2BBFBD;
     margin: auto;
     padding: 0;
     text-align: center;
 }
 
 #header {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 10px;
 }
 
 h1 {
-	font-size: 5em;
-	color: #F5EAB9;
-	padding: 0;
-	margin: 0;
+    font-size: 5em;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    color: ;
 }
 
-h2 {
-	padding: 0;
+h3 {
+    color: #292929;
 }
 
 h2, h3 {
-	font-size: 3em;
-	color: #FCB611;
-	margin: 0;
+    padding: 0;
+    font-size: 3em;
+    color: #FCB611;
+    margin: 0;
 }
 
 div {
-	margin: auto;
+    margin: auto;
 }
 
 #message {
-	font-family: Rajdhani, sans-serif;
-	weight: 400;
-	font-size: 3em;
-	color: #76DBBF;
+    font-family: Rajdhani, sans-serif;
+    weight: 400;
+    font-size: 3em;
+    color: #292929;
     margin: 0;
 }
 
 #container {
-	width: 1024px;
-	height: 700px
+    width: 1024px;
+    height: 700px
 }
 
 .clickable h3 {
@@ -52,6 +56,7 @@ div {
     margin-bottom: 60px;
     margin-left: 10px;
     margin-right: 10px;
+    color: white;
 }
 
 .clickable {
@@ -62,17 +67,16 @@ div {
     padding: 0;
     border-radius: 40px;
     margin: 5px;
-    border: 15px solid #F5EAB9;
+    border: 15px solid #F29B30;
     cursor: crosshair;
     vertical-align: middle;
-    color: #FCB611;
-    background-color: #76DBBF;
+    background-color: #F2B33D;
 }
 
 .entered h3 {
-    color: #FC3714;
+    color: #F22E2E;
 }
 
 .clickable :hover {
-    color: #FC3714;
+    color: #F22E2E;
 }

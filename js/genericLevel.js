@@ -29,7 +29,7 @@ $(document).ready(function() {
 
     // click event determines what to do when the focused object is click and delegates to level-specific js when needed
     $('.clickable').click(function() {
-        $('#text').css('font-size', '1.5em');
+        $('#text').css('font-size', '2em');
         var currentLayer = $(this);
         var currentP = $(this).children('p:first');
         
